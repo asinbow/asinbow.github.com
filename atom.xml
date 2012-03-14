@@ -2,67 +2,15 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2012-03-13T23:01:26+08:00</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://asinbow.github.com/atom.xml" rel="self"/>
+  <link href="http://asinbow.github.com/"/>
+  <updated>2012-03-14T22:45:19+08:00</updated>
+  <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[new-post]]></title>
-    <link href="http://yoursite.com/blog/2012/03/13/new-post/"/>
-    <updated>2012-03-13T22:49:00+08:00</updated>
-    <id>http://yoursite.com/blog/2012/03/13/new-post</id>
-    <content type="html"><![CDATA[<ul>
-<li>content</li>
-</ul>
-
-
-<p>{:toc}</p>
-
-<hr />
-
-<!--{:ruby: lang=ruby code_background_color='#efffef'}-->
-
-
-<h3>sample code</h3>
-
-<pre><code>def test
-end
-</code></pre>
-
-<p>{:ruby}</p>
-
-<h3>words</h3>
-
-<table>
-<thead>
-<tr>
-<th></th>
-<th align="center"> name </th>
-<th align="center"> age </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td align="center"> asin </td>
-<td align="center"> 22  |</td>
-</tr>
-<tr>
-<td></td>
-<td align="center"> asin </td>
-<td align="center"> 22  |</td>
-</tr>
-</tbody>
-</table>
-
-]]></content>
-  </entry>
   
 </feed>
