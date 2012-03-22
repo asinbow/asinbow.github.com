@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>20120224 - ASINBOW</title>
+  <meta name="author" content="asinbow.wang">
+
+  
+  <meta name="description" content="erlang使用总结： 使用erlang也有一段时间了，感觉这个语言还是很特别的，有一些感触，随便写写。
+如果一个gen_server有较高的并发需求，在handle_*函数里面一定减少代码，要尽量快的更新state，然后转向下一条消息的处理。这个是因为， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://asinbow.github.com/blog/2012/02/24/20120224">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="ASINBOW" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">ASINBOW</a></h1>
+  
+    <h2>digging a hole here</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:asinbow.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">20120224</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-24T23:47:34+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>erlang使用总结：</p>
+
+<pre><code>使用erlang也有一段时间了，感觉这个语言还是很特别的，有一些感触，随便写写。
+如果一个gen_server有较高的并发需求，在handle_*函数里面一定减少代码，要尽量快的更新state，然后转向下一条消息的处理。这个是因为，gen_server的消息处理实际上就是erlang本身内建的那个。所有消息都是依次处理的，如何减少handle_*函数中的代码量，是高并发的秘诀。所有的和更新state无关的代码都应该spawn一个新的process去做。
+需要一个自定义的spawn，进入这个函数的时候，自动做一些复制的事情，这样可以使得lager之类的依赖进程局部存储的库工作正常。
+erlang的macro并不强大，开发过程中发现并不如意，考虑把一部分的macro变成函数，以保持代码的可读性。
+现在主攻的一块代码的逻辑需要还是比较清析的，但是写出的代码却无法表达出范式，虽然明显有类似逻辑。看来对函数式编程还是不够参透，明天的一个主要目标就是抽取范式，可能会借助macro，但是不能滥用。
+今天还有一个收获，就是学习了erlang的各种数据容器，明白了不少选取合适容器的依据。
+</code></pre>
+
+<p>明天的目标：</p>
+
+<pre><code>自定义的spawn。
+迁移macro到函数。
+抽取request handler的范式，改善现有代码。
+实现block_request, async_request和push_request的逻辑。
+测试简单的请求发送和接收，包括as client to cloud和as server to battle。
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">asinbow.wang</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-24T23:47:34+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2012</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/02/21/20120221/" title="Previous Post: 20120221">&laquo; 20120221</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2012/02/28/20120228/" title="Next Post: 20120228">20120228 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/03/14/migrate-to-octopress/">migrate to octopress</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/03/vimium-introduction/">vimium——chrome下不错的vim式插件</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/02/20120301/">20120301</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/29/20120229/">20120229</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/02/28/20120228-2/">20120228</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - asinbow.wang -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,16 +1,550 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[ASINBOW]]></title>
   <link href="http://asinbow.github.com/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-03-14T22:45:19+08:00</updated>
+  <updated>2012-03-22T23:20:50+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[asinbow.wang]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[migrate to octopress]]></title>
+    <link href="http://asinbow.github.com/blog/2012/03/14/migrate-to-octopress/"/>
+    <updated>2012-03-14T22:51:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/03/14/migrate-to-octopress</id>
+    <content type="html"><![CDATA[<hr />
+
+<h3>成功从wordpress迁移到octopress</h3>
+
+<p>庆祝一下！
+以后可以自由地用markdown写东西了。</p>
+
+<p>貌似还有不小的额外工作量，
+不过比起可以用vim和markdown写东西，
+这些都不算什么
+——希望我不是过于乐观。</p>
+
+<p>下面追加两条octopress中的代码片断作为例子，
+貌似不错。</p>
+
+<p><strong>RUBY</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">def</span> <span class="nf">test</span>
+</span><span class='line'>    <span class="mi">123</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>ERLANG</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'><span class="nf">test</span><span class="p">()</span> <span class="o">-&gt;</span>
+</span><span class='line'>    <span class="nv">Val</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+</span><span class='line'>    <span class="p">[</span><span class="nv">H</span><span class="p">|</span><span class="nv">T</span><span class="p">]</span> <span class="o">=</span> <span class="nv">Val</span><span class="p">,</span>
+</span><span class='line'>    <span class="nv">T</span><span class="p">.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[vimium——chrome下不错的vim式插件]]></title>
+    <link href="http://asinbow.github.com/blog/2012/03/03/vimium-introduction/"/>
+    <updated>2012-03-03T00:08:15+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/03/03/vimium-introduction</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/philc/vimium">vimium</a></p>
+
+
+<p>以前也用过一些其它的类似插件，不过总是觉得配置复杂或是上手困难。</p>
+
+
+<p>这个不错，没有了以上的两个问题。</p>
+
+
+<hr />
+
+<h3>jekyll &amp; markdown</h3>
+
+<p>一、<a href="http://jekyllrb.com/">jekyll</a></p>
+
+
+<p>二、<a href="http://markdown.tw/">markdown</a></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120301]]></title>
+    <link href="http://asinbow.github.com/blog/2012/03/02/20120301/"/>
+    <updated>2012-03-02T01:32:03+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/03/02/20120301</id>
+    <content type="html"><![CDATA[<p>1. erlang dynamic</p>
+
+
+<p>&nbsp; &nbsp; <a href="http://www.erlang.org/doc/man/code.html">code</a> module.</p>
+
+
+<p>&nbsp; &nbsp; <a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p>
+
+
+<p>2. erlang key-value store <a href="http://learnyousomeerlang.com/static/erlang/keyval_benchmark.erl">benchmark</a></p>
+
+
+<p>&nbsp; &nbsp; dict is a little fast than gb_trees, but seems not support traverse.</p>
+
+
+<p>3. 明天的去公司实现erlang的room server，先用单一的gen_server实现吧，减小复杂度。虽然锁的粒度是全局的，但是如果把算法以外的操作都spawn出去，erlang的性能应该绰绰有余。未来一旦系统稳定了，减小一部分锁的粒度到room层次，提高性能也会容易一些。</p>
+
+
+<p>&nbsp; &nbsp;核心是写出data structure和algorithm。</p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120229]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/29/20120229/"/>
+    <updated>2012-02-29T22:27:35+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/29/20120229</id>
+    <content type="html"><![CDATA[<p>1. erlang dynamic</p>
+
+
+<p>&nbsp; &nbsp; <a href="http://www.erlang.org/doc/man/code.html">code</a> module.</p>
+
+
+<p>&nbsp; &nbsp; <a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p>
+
+
+<p>2.&nbsp;</p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120228]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/28/20120228-2/"/>
+    <updated>2012-02-28T23:44:40+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/28/20120228-2</id>
+    <content type="html"><![CDATA[<p>今天发工资，不过我新办的银行卡没有登记到公司那边，没有发到。等一两天吧。</p>
+
+
+<p>erlang：</p>
+
+
+<p>1. try catch还有一个after，理解每个runtime exception，throw error exit.</p>
+
+
+<p>2. 有时间继续学习<a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores">erlang data structures</a>。</p>
+
+
+<p>3. erlang的动态特性还能发掘多少？</p>
+
+
+<p>4. 我设计的service有点问题，明天改好。</p>
+
+
+<p>5. 明天还得和同事协商解决一个问题，拖了一天的。</p>
+
+
+<p>6. 明天算是正式开始instance manager逻辑的迁移。</p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120228]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/28/20120228/"/>
+    <updated>2012-02-28T22:34:17+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/28/20120228</id>
+    <content type="html"><![CDATA[<p><a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores" title="erlang data structures" target="_blank"></a><a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores"></a><a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores" title="erlang data structures"></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120224]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/24/20120224/"/>
+    <updated>2012-02-24T23:47:34+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/24/20120224</id>
+    <content type="html"><![CDATA[<p>erlang使用总结：</p>
+
+<pre><code>使用erlang也有一段时间了，感觉这个语言还是很特别的，有一些感触，随便写写。
+如果一个gen_server有较高的并发需求，在handle_*函数里面一定减少代码，要尽量快的更新state，然后转向下一条消息的处理。这个是因为，gen_server的消息处理实际上就是erlang本身内建的那个。所有消息都是依次处理的，如何减少handle_*函数中的代码量，是高并发的秘诀。所有的和更新state无关的代码都应该spawn一个新的process去做。
+需要一个自定义的spawn，进入这个函数的时候，自动做一些复制的事情，这样可以使得lager之类的依赖进程局部存储的库工作正常。
+erlang的macro并不强大，开发过程中发现并不如意，考虑把一部分的macro变成函数，以保持代码的可读性。
+现在主攻的一块代码的逻辑需要还是比较清析的，但是写出的代码却无法表达出范式，虽然明显有类似逻辑。看来对函数式编程还是不够参透，明天的一个主要目标就是抽取范式，可能会借助macro，但是不能滥用。
+今天还有一个收获，就是学习了erlang的各种数据容器，明白了不少选取合适容器的依据。
+</code></pre>
+
+<p>明天的目标：</p>
+
+<pre><code>自定义的spawn。
+迁移macro到函数。
+抽取request handler的范式，改善现有代码。
+实现block_request, async_request和push_request的逻辑。
+测试简单的请求发送和接收，包括as client to cloud和as server to battle。
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120221]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/21/20120221/"/>
+    <updated>2012-02-21T22:10:49+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/21/20120221</id>
+    <content type="html"><![CDATA[<p>进展：</p>
+
+
+<p>这两天的工作进展相当缓慢，erlang的现有代码结构被我狂改了一通，已经面目全非了，好在测试通得过。</p>
+
+
+<p>修改的主要目的是引入类似于面向对象语言的编程方式，或者说是ruby的mixin。设计初衷是基本达到了，只是在数据如何存储方面犹豫再三，实在没有主张。</p>
+
+
+<p>现在的代码已经能够发起并建立连接了&mdash;&mdash;嗯，好在比昨天前进了一步，不然太他妈的没面子了。</p>
+
+
+<p>明天的目标：</p>
+
+
+<p>&nbsp; 1、实现发送ticket建立adim连接。</p>
+
+
+<p>&nbsp; 2、在1的基础上，完成request模型。包括request_id, request_handler, request_callback, timeout, non-block process。</p>
+
+
+<p>其他方面就爱咋咋吧。&nbsp;</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120212]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/12/20120212/"/>
+    <updated>2012-02-12T22:41:19+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/12/20120212</id>
+    <content type="html"><![CDATA[<p><span style="font-size:16px;">进展：</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 下午到公司解决了这两天一直在想的一个erlang的配置问题。</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 然后给现在的开发增加了一个辅助功能。</span></p>
+
+
+<p><span style="font-size:16px;">总结：</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 现在感觉对erlang的编程模式还不是太深入，在写代码的时候，总是在不同的数据结构和编程模型之间摇摆不定。</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 看起来还是要多多实践啊。</span></p>
+
+
+<p>&nbsp;</p>
+
+
+<p>erlang:</p>
+
+
+<p>&nbsp; &nbsp;start_link</p>
+
+
+<p>&nbsp;</p>
+
+
+<p><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; color: rgb(0, 0, 0); ">start_link(Module, Args) -&gt; startlink_ret()</span><br style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; " />
+    <a name="start_link-3" style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "></a><span class="bold_code" style="font-family: courier; font-weight: bold; color: rgb(0, 0, 0); ">start_link(SupName, Module, Args) -&gt; startlink_ret()</span></span></p>
+
+
+<p>&nbsp;</p>
+
+
+<p>&nbsp;</p>
+
+
+<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">SupName = sup_name()</span></span></div>
+
+
+<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">Module = module()</span></span></div>
+
+
+<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">Args = term()</span></span></div>
+
+
+<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">startlink_ret() = {ok, pid()}<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| ignore<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| {error, startlink_err()}</span><br />
+    </span></div>
+
+
+<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">startlink_err() = {already_started, pid()} | shutdown | term()</span><br />
+    </span></div>
+
+
+<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">sup_name() = {local, Name :: atom()} | {global, Name :: atom()}</span></span></div>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120208]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/08/20120208/"/>
+    <updated>2012-02-08T22:07:28+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/08/20120208</id>
+    <content type="html"><![CDATA[<p>进展：</p>
+
+
+<p>&nbsp; 解决了几个细碎的问题，但是service的cpu消耗和fiber切换报告还没有出来，这个不是很满意。</p>
+
+
+<p>&nbsp; 为开发模式增加了定制广播消息的功能。</p>
+
+
+<p>&nbsp; 修改了个人主页，修复了现有的bug，悲剧的是期间客户端开发人人员偷偷修改了几个文件的路径，来回折腾了好几趟。</p>
+
+
+<p>&nbsp; 然后开始尝试那个单点server的erlang重写。下午的时候向同事请教了一下相关问题，只能说是初步了解了结构。</p>
+
+
+<p>&nbsp;</p>
+
+
+<p>计划：</p>
+
+
+<p>&nbsp; 完成那个报告。</p>
+
+
+<p>&nbsp; 专心erlang server的开发，紧凑地安排时间。</p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120206]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/06/20120206/"/>
+    <updated>2012-02-06T22:25:32+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/06/20120206</id>
+    <content type="html"><![CDATA[<p>总结和计划：</p>
+
+
+<p>旱晨到公司，落地先解决了自己私下里发现的ruby服务器的bug，然后修改了erlang服务器一些配置。然后就是开始erlang的gen_server，一直到下午开会，期间不断记下一些细碎的任务。</p>
+
+
+<p>开会的时候，确定了我个人的一个新的大任务，就是把一个单点sever从ruby迁移到erlang。估计难度会比较大，不过肯定会搞定。</p>
+
+
+<p>明天到公司后先那些细碎的任务先解决，然后正式转入erlang单点sever的开发。</p>
+
+
+<p>&nbsp;</p>
+
+
+<p>感觉今天还是很充实的，这两天开发erlang服务器的时候，估计会学到不少东西的。</p>
+
+
+<p>&nbsp;</p>
+
+
+<p>现在每天花了不少时间在微博，看看消息，转转消息。</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120205]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/05/20120205/"/>
+    <updated>2012-02-05T22:56:18+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/05/20120205</id>
+    <content type="html"><![CDATA[<p>昨天计划的进展：</p>
+
+
+<p>&nbsp; 五笔输入法的字根基本记忆完毕，现在就是使用它来写着这篇文章。他妈的真慢。SHIT！</p>
+
+
+<p>&nbsp; erlang的二进制基本了解完毕，貌似我原来期待的功能并没有，有点失望。</p>
+
+
+<p>erlang的gen_sever部分到现在还没有真正开始，希望明天能有不错的进展。</p>
+
+
+<p>好吧，我的五笔输入真慢。</p>
+
+
+<p>&nbsp;</p>
+
+
+<p>完毕！</p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120203]]></title>
+    <link href="http://asinbow.github.com/blog/2012/02/03/20120203/"/>
+    <updated>2012-02-03T23:14:40+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/02/03/20120203</id>
+    <content type="html"><![CDATA[<p><span style="font-size:16px;">总结：</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 这两天主要做的事情是把fiber_time_trace的问题解决，以及适当更改clog的server的代码，以保证运作正常。&nbsp;</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; fiber_time_trace的问题比较头疼，最终发现是因为绕了个弯子；照原来的代码模仿下来之后，没想到一部分特殊的代码使用了隐藏路径，查了半天，发现的时候简直吐血了。</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; clog的server的代码现在运行下来还是不错的，不过我做的时候主要还是套用现有代码做的，完成以后感觉自己还是对erlang东西学习得不够深入。针对这个这两天需要学习下面两个方面的内容：一是erlang的binary操作，二是gen_server的整个体系。另外，还需要多体会erlang的编程风格，当然，这个过程得多写代码了。</span></p>
+
+
+<p><span style="font-size:16px;">还有一个小计划：</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 学习五笔输入法，我记得大一的时候学过这玩意儿的，后来就不常用了&mdash;&mdash;主要是不和人聊天。悲催～这次重新学习这个主要是为了学东西的时候快一点，像现在用拼音输入法一个一个的选来选取，累挺。</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 今天背了一部分字根，应该不会太难，因为只是复习而已。</span></p>
+
+
+<p><span style="font-size:16px;">&nbsp; 周末抽时间完成上面一部分内容。</span></p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120130工作进展]]></title>
+    <link href="http://asinbow.github.com/blog/2012/01/30/20120130/"/>
+    <updated>2012-01-30T22:11:26+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/01/30/20120130</id>
+    <content type="html"><![CDATA[<p>早晨刚到的时候谋划开始写erlang的那个log server，面临的最大问题是现有的代码还不太熟悉。</p>
+
+
+<p>刚开始一会儿就开了晨会，所有这两天就开始上班的同事聚在一起。开会的时候觉得上次的那个Fiber time的问题还没有解决，回到办公桌上搞了一会儿，发现不是我想得那么简单，暂时放下了。</p>
+
+
+<p>于是接着继续整erlang，最为纠结的就是究竟用不用现有结构，以及怎么用。左右摇摆，最终还是使用了现有结构。到6点钟的时候，程序编译通过了，接着有一部分跑通了。明天过去继续调通其余部分。</p>
+
+
+<p>现在比较麻烦的是，erlang的动态更新代码还不太会，编译调试，然后都比较慢。明天早上到公司先弄明白这个，所谓磨刀*****。</p>
+
+
+<p>过一会儿就睡了。</p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2012年计划]]></title>
+    <link href="http://asinbow.github.com/blog/2012/01/23/2012-year-plan/"/>
+    <updated>2012-01-23T00:00:58+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/01/23/2012-year-plan</id>
+    <content type="html"><![CDATA[<p><span style="font-size:16px;">一、傻逼的时候看看这篇文章。</span></p>
+
+
+<p><span style="font-size:16px;">二、增强自我控制，安排好作息。</span></p>
+
+
+<p><span style="font-size:16px;">三、对技术精益求精。</span></p>
+
+
+<p><span style="font-size:16px;">四、工作要控制节奏，提高效率，不要拖拖拉拉。</span></p>
+
+
+<p><span style="font-size:16px;">五、犯错的时候一定要惩罚一下自己。【*】</span></p>
+
+
+<p><span style="font-size:16px;">六、和爱人好好相处，听话，乖。</span></p>
+
+
+<p><span style="font-size:16px;">七、常回家看看。</span></p>
+
+
+<p><span style="font-size:16px;">八、坚持写作，甭管多烂。</span></p>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[2012年计划]]></title>
+    <link href="http://asinbow.github.com/blog/2012/01/22/2012-plan/"/>
+    <updated>2012-01-22T23:57:04+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/01/22/2012-plan</id>
+    <content type="html"><![CDATA[<pre><code>一、傻逼的时候看看这篇文章。
+二、增强自我控制，安排好作息。
+三、对技术精益求精。
+四、工作要控制节奏，提高效率，不要拖拖拉拉。
+五、犯错的时候一定要惩罚一下自己。【*】
+六、和爱人好好相处，听话，乖。
+七、常回家看看。
+八、坚持写作，甭管多滥。
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[我相信什么？]]></title>
+    <link href="http://asinbow.github.com/blog/2012/01/22/what-i-believe/"/>
+    <updated>2012-01-22T23:28:23+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/01/22/what-i-believe</id>
+    <content type="html"><![CDATA[<p><span style="font-size:16px;">最近，有些事情足够充分的让我意识到，我，已经事实上是一个近中年的人了。而这显然已经不是一个简单的年龄问题，而是一个社会年龄问题。我应该往上移步一个台阶了。</span></p>
+
+
+<p><span style="font-size:16px;">其实，给这篇本来定的题目是《你相信什么？》，但是写完第一段就已经觉得不妥了&mdash;&mdash;我从来没有厉声责问他人的这种问题的权利，我只能责问我自己，我过去、现在和将来相信什么？眼看着要移步一个台阶的年纪，这个问题尤其尖锐苛刻。</span></p>
+
+
+<p><span style="font-size:16px;">现在的我（也许从很早以前就开始了），已将生命视为宿命，我相信上天会给我所有我应该有的东西，苦难，伤痛，责任，幸福，快乐，凡此总总，避是避不开的，求是求不来的，一切皆应当在寂静中承受。善未必有善报，恶未必有恶报，这个才是真的血淋淋的现实，所以佛祖发明了来世，并教人信了它，以使人们趋善。这些是佛祖的骗局，或者只是众佛陀们的以讹传讹，或者极乐世界搞精神文明建设文化部门删掉那些劝人作恶的东西，或者只是佛经印漏了什么，我丝毫没有兴趣，因为这些都不重要。重要的是，对于我这个奔三的人，那些曾经和现在相信的东西，都将经历生命中严酷的考验。</span></p>
+
+
+<p><span style="font-size:16px;">过去一年，我最开心的事情是和女朋友的相处。我说的不是那过去的每一天，而是整个这个从头到尾、断断续续的过程。爱情需要平平淡淡，但是不需要天天平平淡淡；爱情需要过山车，但不需要天天过山车；爱情需要麻辣烫，但是不需要天天麻辣烫&hellip;&hellip;说实话，这里面，哪样多了，我都会烦。这个过程最大程度地印证了我两个观点，一是找女朋友，需要看的是内质，而不是学历、身高、容貌，当然这些也会是一个因素，但那些只是偏好，而不是一个什么真真正正的标准。偏好就是去麦当劳或者肯德基挑选小杯可乐、中杯可乐还是大杯可乐，标准是说那里面是可乐，而不是地沟油、剧毒甲胺磷。学历、身高、容貌，胸大不大，屁股圆不圆，兰花指，金玉足，丹凤眼，这些显然都是某种偏好。另一个观点，就是尽量少帮爱人解决问题，任何时候，只要让她知道你在背后就行了；这东西，承担的愈多，自己愈累，爱情愈是陷入泥沼。</span></p>
+
+
+<p><span style="font-size:16px;">迄今为止遇到的事情验证了这两个观点，为此我很得意：因为那些是我相信的。唯一忧虑的是，为此高兴到我这个年纪，也该画个句号了，因为有更多的考验将劈头盖脸打过来。</span></p>
+
+
+<p><span style="font-size:16px;">我 相信&nbsp;人人平等，每个人都应该有足够的私权，以行使自己基本的自由；我 相信&nbsp;人己权界，即使最亲近的人，也要尊重其自由意志；我 相信&nbsp;死刑应当废除，我们熟知的这个世界充斥的并不是罪恶的横行，而是善良的窒息，而即便对待一个真正的毫无疑问的穷凶极恶的罪人，剥夺其生命却并不是毫无疑问的；我 相信&nbsp;国家是公共领域，而非一人或者一党之私，每个人都有参与的权利；我还相信善终究会战胜恶&hellip;&hellip;</span></p>
+
+
+<p><span style="font-size:16px;">我将需要在赚钱之余坚持这些我相信的东西。</span><span style="font-size: 16px; ">偷偷说一下，我还相信我的手中最终会有选票！</span></p>
+
+
+<p><span style="font-size:16px;"><br />
+    </span></p>
+
+
+<p><span style="font-size:16px;">2012年除夕23时26分</span></p>
+
+
+
+]]></content>
+  </entry>
   
 </feed>
