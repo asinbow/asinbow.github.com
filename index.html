@@ -171,24 +171,17 @@
   </header>
 
 
-  <div class="entry-content"><p><a href="https://github.com/philc/vimium">vimium</a></p>
-
-
-<p>以前也用过一些其它的类似插件，不过总是觉得配置复杂或是上手困难。</p>
-
+  <div class="entry-content"><p><a href="https://github.com/philc/vimium">vimium</a>
+以前也用过一些其它的类似插件，不过总是觉得配置复杂或是上手困难。</p>
 
 <p>这个不错，没有了以上的两个问题。</p>
-
 
 <hr />
 
 <h3>jekyll &amp; markdown</h3>
 
-<p>一、<a href="http://jekyllrb.com/">jekyll</a></p>
-
-
-<p>二、<a href="http://markdown.tw/">markdown</a></p>
-
+<p>一、<a href="http://jekyllrb.com/">jekyll</a>
+二、<a href="http://markdown.tw/">markdown</a></p>
 </div>
   
   
@@ -224,28 +217,27 @@
   </header>
 
 
-  <div class="entry-content"><p>1. erlang dynamic</p>
+  <div class="entry-content"><h3>1. erlang dynamic</h3>
 
+<blockquote><p><a href="http://www.erlang.org/doc/man/code.html">code</a> module.<br/>
+<a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p></blockquote>
 
-<p>&nbsp; &nbsp; <a href="http://www.erlang.org/doc/man/code.html">code</a> module.</p>
+<h3>2. erlang key-value store <a href="http://learnyousomeerlang.com/static/erlang/keyval_benchmark.erl">benchmark</a></h3>
 
+<blockquote><p>dict is a little fast than gb_trees, but seems not support traverse.</p></blockquote>
 
-<p>&nbsp; &nbsp; <a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p>
+<h3>3. 明天的去公司实现erlang的room server，</h3>
 
+<p>先用单一的gen_server实现吧，
+减小复杂度。
+虽然锁的粒度是全局的，
+但是如果把算法以外的操作都spawn出去，
+erlang的性能应该绰绰有余。
+未来一旦系统稳定了，
+减小一部分锁的粒度到room层次，
+提高性能也会容易一些。</p>
 
-<p>2. erlang key-value store <a href="http://learnyousomeerlang.com/static/erlang/keyval_benchmark.erl">benchmark</a></p>
-
-
-<p>&nbsp; &nbsp; dict is a little fast than gb_trees, but seems not support traverse.</p>
-
-
-<p>3. 明天的去公司实现erlang的room server，先用单一的gen_server实现吧，减小复杂度。虽然锁的粒度是全局的，但是如果把算法以外的操作都spawn出去，erlang的性能应该绰绰有余。未来一旦系统稳定了，减小一部分锁的粒度到room层次，提高性能也会容易一些。</p>
-
-
-<p>&nbsp; &nbsp;核心是写出data structure和algorithm。</p>
-
-
-
+<p>核心是写出data structure和algorithm。</p>
 </div>
   
   
@@ -258,55 +250,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/02/29/20120229/">20120229</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-29T22:27:35+08:00" pubdate data-updated="true">Feb 29<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>1. erlang dynamic</p>
-
-
-<p>&nbsp; &nbsp; <a href="http://www.erlang.org/doc/man/code.html">code</a> module.</p>
-
-
-<p>&nbsp; &nbsp; <a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p>
-
-
-<p>2.&nbsp;</p>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/28/20120228-2/">20120228</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/02/28/20120228/">20120228</a></h1>
     
     
       <p class="meta">
@@ -366,42 +310,6 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/02/28/20120228/">20120228</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-28T22:34:17+08:00" pubdate data-updated="true">Feb 28<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores" title="erlang data structures" target="_blank"></a><a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores"></a><a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores" title="erlang data structures"></a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
       <h1 class="entry-title"><a href="/blog/2012/02/24/20120224/">20120224</a></h1>
     
     
@@ -425,24 +333,56 @@
   </header>
 
 
-  <div class="entry-content"><p>erlang使用总结：</p>
+  <div class="entry-content"><h3>erlang使用总结：</h3>
 
-<pre><code>使用erlang也有一段时间了，感觉这个语言还是很特别的，有一些感触，随便写写。
-如果一个gen_server有较高的并发需求，在handle_*函数里面一定减少代码，要尽量快的更新state，然后转向下一条消息的处理。这个是因为，gen_server的消息处理实际上就是erlang本身内建的那个。所有消息都是依次处理的，如何减少handle_*函数中的代码量，是高并发的秘诀。所有的和更新state无关的代码都应该spawn一个新的process去做。
-需要一个自定义的spawn，进入这个函数的时候，自动做一些复制的事情，这样可以使得lager之类的依赖进程局部存储的库工作正常。
-erlang的macro并不强大，开发过程中发现并不如意，考虑把一部分的macro变成函数，以保持代码的可读性。
-现在主攻的一块代码的逻辑需要还是比较清析的，但是写出的代码却无法表达出范式，虽然明显有类似逻辑。看来对函数式编程还是不够参透，明天的一个主要目标就是抽取范式，可能会借助macro，但是不能滥用。
-今天还有一个收获，就是学习了erlang的各种数据容器，明白了不少选取合适容器的依据。
-</code></pre>
+<p>使用erlang也有一段时间了，
+感觉这个语言还是很特别的，
+有一些感触，
+随便写写。</p>
 
-<p>明天的目标：</p>
+<p>如果一个gen_server有较高的并发需求，
+在handle_*函数里面一定减少代码，
+要尽量快的更新state，
+然后转向下一条消息的处理。
+这个是因为，
+gen_server的消息处理实际上就是erlang本身内建的那个。
+所有消息都是依次处理的，
+如何减少handle_*函数中的代码量，
+是高并发的秘诀。
+所有的和更新state无关的代码都应该spawn一个新的process去做。</p>
 
-<pre><code>自定义的spawn。
-迁移macro到函数。
-抽取request handler的范式，改善现有代码。
-实现block_request, async_request和push_request的逻辑。
-测试简单的请求发送和接收，包括as client to cloud和as server to battle。
-</code></pre>
+<p>需要一个自定义的spawn，
+进入这个函数的时候，
+自动做一些复制的事情，
+这样可以使得lager之类的依赖进程局部存储的库工作正常。</p>
+
+<p>erlang的macro并不强大，
+开发过程中发现并不如意，
+考虑把一部分的macro变成函数，
+以保持代码的可读性。</p>
+
+<p>现在主攻的一块代码的逻辑需要还是比较清析的，
+但是写出的代码却无法表达出范式，
+虽然明显有类似逻辑。
+看来对函数式编程还是不够参透，
+明天的一个主要目标就是抽取范式，
+可能会借助macro，
+但是不能滥用。</p>
+
+<p>今天还有一个收获，
+就是学习了erlang的各种数据容器，
+明白了不少选取合适容器的依据。</p>
+
+<h2>明天的目标：</h2>
+
+<blockquote><ul>
+<li>自定义的spawn。</li>
+<li>迁移macro到函数。</li>
+<li>抽取request handler的范式，改善现有代码。</li>
+<li>实现block_request, async_request和push_request的逻辑。</li>
+<li>测试简单的请求发送和接收，包括as client to cloud和as server to battle。</li>
+</ul>
+</blockquote>
 </div>
   
   
@@ -478,28 +418,31 @@ erlang的macro并不强大，开发过程中发现并不如意，考虑把一部
   </header>
 
 
-  <div class="entry-content"><p>进展：</p>
+  <div class="entry-content"><h3>进展：</h3>
 
+<p>这两天的工作进展相当缓慢，
+erlang的现有代码结构被我狂改了一通，
+已经面目全非了，
+好在测试通得过。</p>
 
-<p>这两天的工作进展相当缓慢，erlang的现有代码结构被我狂改了一通，已经面目全非了，好在测试通得过。</p>
+<p>修改的主要目的是引入类似于面向对象语言的编程方式，
+或者说是ruby的mixin。
+设计初衷是基本达到了，
+只是在数据如何存储方面犹豫再三，
+实在没有主张。</p>
 
+<p>现在的代码已经能够发起并建立连接了——
+嗯，好在比昨天前进了一步，
+不然太他妈的没面子了。</p>
 
-<p>修改的主要目的是引入类似于面向对象语言的编程方式，或者说是ruby的mixin。设计初衷是基本达到了，只是在数据如何存储方面犹豫再三，实在没有主张。</p>
+<h3>明天的目标：</h3>
 
-
-<p>现在的代码已经能够发起并建立连接了&mdash;&mdash;嗯，好在比昨天前进了一步，不然太他妈的没面子了。</p>
-
-
-<p>明天的目标：</p>
-
-
-<p>&nbsp; 1、实现发送ticket建立adim连接。</p>
-
-
-<p>&nbsp; 2、在1的基础上，完成request模型。包括request_id, request_handler, request_callback, timeout, non-block process。</p>
-
-
-<p>其他方面就爱咋咋吧。&nbsp;</p>
+<ul>
+<li><p>1、实现发送ticket建立adim连接。</p></li>
+<li><p>2、在1的基础上，完成request模型。<br/>
+包括request_id, request_handler, request_callback, timeout, non-block process。
+其他方面就爱咋咋吧。</p></li>
+</ul>
 
 </div>
   
@@ -536,68 +479,44 @@ erlang的macro并不强大，开发过程中发现并不如意，考虑把一部
   </header>
 
 
-  <div class="entry-content"><p><span style="font-size:16px;">进展：</span></p>
+  <div class="entry-content"><h3>进展：</h3>
 
+<p>下午到公司解决了这两天一直在想的一个erlang的配置问题。
+然后给现在的开发增加了一个辅助功能。</p>
 
-<p><span style="font-size:16px;">&nbsp; 下午到公司解决了这两天一直在想的一个erlang的配置问题。</span></p>
+<h3>总结：</h3>
 
+<p>现在感觉对erlang的编程模式还不是太深入，
+在写代码的时候，
+总是在不同的数据结构和编程模型之间摇摆不定。</p>
 
-<p><span style="font-size:16px;">&nbsp; 然后给现在的开发增加了一个辅助功能。</span></p>
+<p>看起来还是要多多实践啊。</p>
 
+<h3>erlang</h3>
 
-<p><span style="font-size:16px;">总结：</span></p>
-
-
-<p><span style="font-size:16px;">&nbsp; 现在感觉对erlang的编程模式还不是太深入，在写代码的时候，总是在不同的数据结构和编程模型之间摇摆不定。</span></p>
-
-
-<p><span style="font-size:16px;">&nbsp; 看起来还是要多多实践啊。</span></p>
-
-
-<p>&nbsp;</p>
-
-
-<p>erlang:</p>
-
-
-<p>&nbsp; &nbsp;start_link</p>
-
-
-<p>&nbsp;</p>
-
-
-<p><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; color: rgb(0, 0, 0); ">start_link(Module, Args) -&gt; startlink_ret()</span><br style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; " />
-    <a name="start_link-3" style="color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "></a><span class="bold_code" style="font-family: courier; font-weight: bold; color: rgb(0, 0, 0); ">start_link(SupName, Module, Args) -&gt; startlink_ret()</span></span></p>
-
-
-<p>&nbsp;</p>
-
-
-<p>&nbsp;</p>
-
-
-<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">SupName = sup_name()</span></span></div>
-
-
-<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">Module = module()</span></span></div>
-
-
-<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">Args = term()</span></span></div>
-
-
-<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">startlink_ret() = {ok, pid()}<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| ignore<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| {error, startlink_err()}</span><br />
-    </span></div>
-
-
-<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">startlink_err() = {already_started, pid()} | shutdown | term()</span><br />
-    </span></div>
-
-
-<div class="REFTYPES" style="margin-left: 8mm; color: rgb(0, 0, 0); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: medium; "><span style="font-size:8px;"><span class="bold_code" style="font-family: courier; font-weight: bold; ">sup_name() = {local, Name :: atom()} | {global, Name :: atom()}</span></span></div>
-
-
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'>    <span class="n">start_link</span><span class="p">(</span><span class="nv">Module</span><span class="p">,</span> <span class="nv">Args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">startlink_ret</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">start_link</span><span class="p">(</span><span class="nv">SupName</span><span class="p">,</span> <span class="nv">Module</span><span class="p">,</span> <span class="nv">Args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">startlink_ret</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nv">SupName</span> <span class="o">=</span> <span class="n">sup_name</span><span class="p">()</span>
+</span><span class='line'>    <span class="nv">Module</span> <span class="o">=</span> <span class="n">module</span><span class="p">()</span>
+</span><span class='line'>    <span class="nv">Args</span> <span class="o">=</span> <span class="n">term</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">startlink_ret</span><span class="p">()</span> <span class="o">=</span> <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="n">pid</span><span class="p">()}</span>
+</span><span class='line'>                    <span class="p">|</span> <span class="n">ignore</span>
+</span><span class='line'>                    <span class="p">|</span> <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="n">startlink_err</span><span class="p">()}</span>
+</span><span class='line'>    <span class="n">startlink_err</span><span class="p">()</span> <span class="o">=</span> <span class="p">{</span><span class="n">already_started</span><span class="p">,</span> <span class="n">pid</span><span class="p">()}</span> <span class="p">|</span> <span class="n">shutdown</span> <span class="p">|</span> <span class="n">term</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">sup_name</span><span class="p">()</span> <span class="o">=</span> <span class="p">{</span><span class="n">local</span><span class="p">,</span> <span class="nv">Name</span> <span class="p">::</span> <span class="n">atom</span><span class="p">()}</span> <span class="p">|</span> <span class="p">{</span><span class="n">global</span><span class="p">,</span> <span class="nv">Name</span> <span class="p">::</span> <span class="n">atom</span><span class="p">()}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -634,34 +553,135 @@ erlang的macro并不强大，开发过程中发现并不如意，考虑把一部
   </header>
 
 
-  <div class="entry-content"><p>进展：</p>
+  <div class="entry-content"><h3>进展：</h3>
+
+<p>解决了几个细碎的问题，
+但是service的cpu消耗和fiber切换报告还没有出来，
+这个不是很满意。
+为开发模式增加了定制广播消息的功能。</p>
+
+<p>修改了个人主页，
+修复了现有的bug，
+悲剧的是期间客户端开发人人员偷偷修改了几个文件的路径，
+来回折腾了好几趟。</p>
+
+<p>然后开始尝试那个单点server的erlang重写。
+下午的时候向同事请教了一下相关问题，
+只能说是初步了解了结构。</p>
+
+<h3>计划：</h3>
+
+<p>完成那个报告。<br/>
+专心erlang server的开发，紧凑地安排时间。</p>
+</div>
+  
+  
 
 
-<p>&nbsp; 解决了几个细碎的问题，但是service的cpu消耗和fiber切换报告还没有出来，这个不是很满意。</p>
-
-
-<p>&nbsp; 为开发模式增加了定制广播消息的功能。</p>
-
-
-<p>&nbsp; 修改了个人主页，修复了现有的bug，悲剧的是期间客户端开发人人员偷偷修改了几个文件的路径，来回折腾了好几趟。</p>
-
-
-<p>&nbsp; 然后开始尝试那个单点server的erlang重写。下午的时候向同事请教了一下相关问题，只能说是初步了解了结构。</p>
-
-
-<p>&nbsp;</p>
-
-
-<p>计划：</p>
-
-
-<p>&nbsp; 完成那个报告。</p>
-
-
-<p>&nbsp; 专心erlang server的开发，紧凑地安排时间。</p>
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/06/20120206/">20120206</a></h1>
+    
+    
+      <p class="meta">
+        
 
 
 
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-06T22:25:32+08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>总结和计划：</h3>
+
+<p>旱晨到公司，
+落地先解决了自己私下里发现的ruby服务器的bug，
+然后修改了erlang服务器一些配置。
+然后就是开始erlang的gen_server，
+一直到下午开会，
+期间不断记下一些细碎的任务。</p>
+
+<p>开会的时候，
+确定了我个人的一个新的大任务，
+就是把一个单点sever从ruby迁移到erlang。
+估计难度会比较大，
+不过肯定会搞定。</p>
+
+<p>明天到公司后先那些细碎的任务先解决，
+然后正式转入erlang单点sever的开发。</p>
+
+<p>感觉今天还是很充实的，
+这两天开发erlang服务器的时候，
+估计会学到不少东西的。</p>
+
+<p>现在每天花了不少时间在微博，
+看看消息，
+转转消息。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/05/20120205/">20120205</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-05T22:56:18+08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>昨天计划的进展：</h3>
+
+<p>五笔输入法的字根基本记忆完毕，
+现在就是使用它来写着这篇文章。
+他妈的真慢。
+SHIT！<br/>
+erlang的二进制基本了解完毕，
+貌似我原来期待的功能并没有，
+有点失望。<br/>
+erlang的gen_sever部分到现在还没有真正开始，
+希望明天能有不错的进展。<br/>
+好吧，
+我的五笔输入真慢。<br/>
+完毕！</p>
 </div>
   
   
@@ -696,11 +716,11 @@ erlang的macro并不强大，开发过程中发现并不如意，考虑把一部
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/29/20120229/">20120229</a>
+        <a href="/blog/2012/02/28/20120228/">20120228</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/28/20120228-2/">20120228</a>
+        <a href="/blog/2012/02/24/20120224/">20120224</a>
       </li>
     
   </ul>

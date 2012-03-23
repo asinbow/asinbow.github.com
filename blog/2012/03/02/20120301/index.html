@@ -9,7 +9,8 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="1. erlang dynamic &nbsp; &nbsp; code module. &nbsp; &nbsp; dynamic_compile module. 2. erlang key-value store benchmark &nbsp; &nbsp; dict is a little &hellip;">
+  <meta name="description" content="1. erlang dynamic code module.
+dynamic_compile module. 2. erlang key-value store benchmark dict is a little fast than gb_trees, but seems not support &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,28 +91,27 @@
   </header>
 
 
-<div class="entry-content"><p>1. erlang dynamic</p>
+<div class="entry-content"><h3>1. erlang dynamic</h3>
 
+<blockquote><p><a href="http://www.erlang.org/doc/man/code.html">code</a> module.<br/>
+<a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p></blockquote>
 
-<p>&nbsp; &nbsp; <a href="http://www.erlang.org/doc/man/code.html">code</a> module.</p>
+<h3>2. erlang key-value store <a href="http://learnyousomeerlang.com/static/erlang/keyval_benchmark.erl">benchmark</a></h3>
 
+<blockquote><p>dict is a little fast than gb_trees, but seems not support traverse.</p></blockquote>
 
-<p>&nbsp; &nbsp; <a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p>
+<h3>3. 明天的去公司实现erlang的room server，</h3>
 
+<p>先用单一的gen_server实现吧，
+减小复杂度。
+虽然锁的粒度是全局的，
+但是如果把算法以外的操作都spawn出去，
+erlang的性能应该绰绰有余。
+未来一旦系统稳定了，
+减小一部分锁的粒度到room层次，
+提高性能也会容易一些。</p>
 
-<p>2. erlang key-value store <a href="http://learnyousomeerlang.com/static/erlang/keyval_benchmark.erl">benchmark</a></p>
-
-
-<p>&nbsp; &nbsp; dict is a little fast than gb_trees, but seems not support traverse.</p>
-
-
-<p>3. 明天的去公司实现erlang的room server，先用单一的gen_server实现吧，减小复杂度。虽然锁的粒度是全局的，但是如果把算法以外的操作都spawn出去，erlang的性能应该绰绰有余。未来一旦系统稳定了，减小一部分锁的粒度到room层次，提高性能也会容易一些。</p>
-
-
-<p>&nbsp; &nbsp;核心是写出data structure和algorithm。</p>
-
-
-
+<p>核心是写出data structure和algorithm。</p>
 </div>
 
 
@@ -149,7 +149,7 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/02/29/20120229/" title="Previous Post: 20120229">&laquo; 20120229</a>
+        <a class="basic-alignment left" href="/blog/2012/02/28/20120228/" title="Previous Post: 20120228">&laquo; 20120228</a>
       
       
         <a class="basic-alignment right" href="/blog/2012/03/03/vimium-introduction/" title="Next Post: vimium——chrome下不错的vim式插件">vimium——chrome下不错的vim式插件 &raquo;</a>
@@ -179,11 +179,11 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/29/20120229/">20120229</a>
+        <a href="/blog/2012/02/28/20120228/">20120228</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/28/20120228-2/">20120228</a>
+        <a href="/blog/2012/02/24/20120224/">20120224</a>
       </li>
     
   </ul>

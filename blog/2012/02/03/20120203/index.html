@@ -9,7 +9,13 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="总结： &nbsp; 这两天主要做的事情是把fiber_time_trace的问题解决，以及适当更改clog的server的代码，以保证运作正常。&nbsp; &nbsp; fiber_time_trace的问题比较头疼，最终发现是因为绕了个弯子；照原来的代码模仿下来之后， &hellip;">
+  <meta name="description" content="总结： 这两天主要做的事情是把fiber_time_trace的问题解决，
+以及适当更改clog的server的代码，
+以保证运作正常。 fiber_time_trace的问题比较头疼，
+最终发现是因为绕了个弯子；
+照原来的代码模仿下来之后，
+没想到一部分特殊的代码使用了隐藏路径，
+查了半天， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -90,31 +96,45 @@
   </header>
 
 
-<div class="entry-content"><p><span style="font-size:16px;">总结：</span></p>
+<div class="entry-content"><h3>总结：</h3>
 
+<p>这两天主要做的事情是把fiber_time_trace的问题解决，
+以及适当更改clog的server的代码，
+以保证运作正常。</p>
 
-<p><span style="font-size:16px;">&nbsp; 这两天主要做的事情是把fiber_time_trace的问题解决，以及适当更改clog的server的代码，以保证运作正常。&nbsp;</span></p>
+<p>fiber_time_trace的问题比较头疼，
+最终发现是因为绕了个弯子；
+照原来的代码模仿下来之后，
+没想到一部分特殊的代码使用了隐藏路径，
+查了半天，发现的时候简直吐血了。</p>
 
+<p>clog的server的代码现在运行下来还是不错的，
+不过我做的时候主要还是套用现有代码做的，
+完成以后感觉自己还是对erlang东西学习得不够深入。
+针对这个这两天需要学习下面两个方面的内容：
+一是erlang的binary操作，
+二是gen_server的整个体系。
+另外，
+还需要多体会erlang的编程风格，
+当然，
+这个过程得多写代码了。</p>
 
-<p><span style="font-size:16px;">&nbsp; fiber_time_trace的问题比较头疼，最终发现是因为绕了个弯子；照原来的代码模仿下来之后，没想到一部分特殊的代码使用了隐藏路径，查了半天，发现的时候简直吐血了。</span></p>
+<h3>还有一个小计划：</h3>
 
+<p>学习五笔输入法，
+我记得大一的时候学过这玩意儿的，
+后来就不常用了。</p>
 
-<p><span style="font-size:16px;">&nbsp; clog的server的代码现在运行下来还是不错的，不过我做的时候主要还是套用现有代码做的，完成以后感觉自己还是对erlang东西学习得不够深入。针对这个这两天需要学习下面两个方面的内容：一是erlang的binary操作，二是gen_server的整个体系。另外，还需要多体会erlang的编程风格，当然，这个过程得多写代码了。</span></p>
+<p>主要是不和人聊天。
+悲催～
+这次重新学习这个主要是为了学东西的时候快一点，
+像现在用拼音输入法一个一个的选来选取，
+累挺。</p>
 
-
-<p><span style="font-size:16px;">还有一个小计划：</span></p>
-
-
-<p><span style="font-size:16px;">&nbsp; 学习五笔输入法，我记得大一的时候学过这玩意儿的，后来就不常用了&mdash;&mdash;主要是不和人聊天。悲催～这次重新学习这个主要是为了学东西的时候快一点，像现在用拼音输入法一个一个的选来选取，累挺。</span></p>
-
-
-<p><span style="font-size:16px;">&nbsp; 今天背了一部分字根，应该不会太难，因为只是复习而已。</span></p>
-
-
-<p><span style="font-size:16px;">&nbsp; 周末抽时间完成上面一部分内容。</span></p>
-
-
-
+<p>今天背了一部分字根，
+应该不会太难，
+因为只是复习而已。
+周末抽时间完成上面一部分内容。</p>
 </div>
 
 
@@ -182,11 +202,11 @@
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/29/20120229/">20120229</a>
+        <a href="/blog/2012/02/28/20120228/">20120228</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/28/20120228-2/">20120228</a>
+        <a href="/blog/2012/02/24/20120224/">20120224</a>
       </li>
     
   </ul>

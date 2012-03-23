@@ -9,8 +9,14 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="erlang使用总结： 使用erlang也有一段时间了，感觉这个语言还是很特别的，有一些感触，随便写写。
-如果一个gen_server有较高的并发需求，在handle_*函数里面一定减少代码，要尽量快的更新state，然后转向下一条消息的处理。这个是因为， &hellip;">
+  <meta name="description" content="erlang使用总结： 使用erlang也有一段时间了，
+感觉这个语言还是很特别的，
+有一些感触，
+随便写写。 如果一个gen_server有较高的并发需求，
+在handle_*函数里面一定减少代码，
+要尽量快的更新state，
+然后转向下一条消息的处理。
+这个是因为， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -91,24 +97,56 @@
   </header>
 
 
-<div class="entry-content"><p>erlang使用总结：</p>
+<div class="entry-content"><h3>erlang使用总结：</h3>
 
-<pre><code>使用erlang也有一段时间了，感觉这个语言还是很特别的，有一些感触，随便写写。
-如果一个gen_server有较高的并发需求，在handle_*函数里面一定减少代码，要尽量快的更新state，然后转向下一条消息的处理。这个是因为，gen_server的消息处理实际上就是erlang本身内建的那个。所有消息都是依次处理的，如何减少handle_*函数中的代码量，是高并发的秘诀。所有的和更新state无关的代码都应该spawn一个新的process去做。
-需要一个自定义的spawn，进入这个函数的时候，自动做一些复制的事情，这样可以使得lager之类的依赖进程局部存储的库工作正常。
-erlang的macro并不强大，开发过程中发现并不如意，考虑把一部分的macro变成函数，以保持代码的可读性。
-现在主攻的一块代码的逻辑需要还是比较清析的，但是写出的代码却无法表达出范式，虽然明显有类似逻辑。看来对函数式编程还是不够参透，明天的一个主要目标就是抽取范式，可能会借助macro，但是不能滥用。
-今天还有一个收获，就是学习了erlang的各种数据容器，明白了不少选取合适容器的依据。
-</code></pre>
+<p>使用erlang也有一段时间了，
+感觉这个语言还是很特别的，
+有一些感触，
+随便写写。</p>
 
-<p>明天的目标：</p>
+<p>如果一个gen_server有较高的并发需求，
+在handle_*函数里面一定减少代码，
+要尽量快的更新state，
+然后转向下一条消息的处理。
+这个是因为，
+gen_server的消息处理实际上就是erlang本身内建的那个。
+所有消息都是依次处理的，
+如何减少handle_*函数中的代码量，
+是高并发的秘诀。
+所有的和更新state无关的代码都应该spawn一个新的process去做。</p>
 
-<pre><code>自定义的spawn。
-迁移macro到函数。
-抽取request handler的范式，改善现有代码。
-实现block_request, async_request和push_request的逻辑。
-测试简单的请求发送和接收，包括as client to cloud和as server to battle。
-</code></pre>
+<p>需要一个自定义的spawn，
+进入这个函数的时候，
+自动做一些复制的事情，
+这样可以使得lager之类的依赖进程局部存储的库工作正常。</p>
+
+<p>erlang的macro并不强大，
+开发过程中发现并不如意，
+考虑把一部分的macro变成函数，
+以保持代码的可读性。</p>
+
+<p>现在主攻的一块代码的逻辑需要还是比较清析的，
+但是写出的代码却无法表达出范式，
+虽然明显有类似逻辑。
+看来对函数式编程还是不够参透，
+明天的一个主要目标就是抽取范式，
+可能会借助macro，
+但是不能滥用。</p>
+
+<p>今天还有一个收获，
+就是学习了erlang的各种数据容器，
+明白了不少选取合适容器的依据。</p>
+
+<h2>明天的目标：</h2>
+
+<blockquote><ul>
+<li>自定义的spawn。</li>
+<li>迁移macro到函数。</li>
+<li>抽取request handler的范式，改善现有代码。</li>
+<li>实现block_request, async_request和push_request的逻辑。</li>
+<li>测试简单的请求发送和接收，包括as client to cloud和as server to battle。</li>
+</ul>
+</blockquote>
 </div>
 
 
@@ -176,11 +214,11 @@ erlang的macro并不强大，开发过程中发现并不如意，考虑把一部
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/29/20120229/">20120229</a>
+        <a href="/blog/2012/02/28/20120228/">20120228</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/02/28/20120228-2/">20120228</a>
+        <a href="/blog/2012/02/24/20120224/">20120224</a>
       </li>
     
   </ul>
