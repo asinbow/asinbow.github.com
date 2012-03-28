@@ -4,7 +4,7 @@
   <title><![CDATA[ASINBOW]]></title>
   <link href="http://asinbow.github.com/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-03-24T01:01:52+08:00</updated>
+  <updated>2012-03-28T22:49:45+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[asinbow.wang]]></name>
@@ -12,6 +12,43 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[20120327]]></title>
+    <link href="http://asinbow.github.com/blog/2012/03/28/20120327/"/>
+    <updated>2012-03-28T23:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/03/28/20120327</id>
+    <content type="html"><![CDATA[<p>最近总算是见识了一下完全秘薪制的崩盘，
+公司人事忽然间变动了不少，
+原本不必要的损失看来在这次风波中也难以避免了。
+这个引出的问题就是，
+在一个不断变大的公司里面，
+完全的秘薪制是否真的能够降低成本？</p>
+
+<p>显然事情决没有这么简单。</p>
+
+<p>今天上午把avatar服装的问题踢给了新来的美术同事，
+还得亲自教新同事怎么弄，
+美术走人了，
+技术顶场，
+这个是什么世道啊！</p>
+
+<p>然后开始追踪登陆失败的bug，
+最后不了了之，
+决定如入新的log，
+这次上线再看。</p>
+
+<p>下午折腾mongodb的replica set和sharding。
+sharding的还没弄完，
+replica set倒是成功了。
+不过这次是不会用sharding了，
+因为还没有到那一步，
+只是要研究清楚。
+明天发布完毕后，
+会跟上司要一台机器的权限，
+尝试上线一些东西了。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[migrate to octopress]]></title>
