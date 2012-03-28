@@ -4,7 +4,7 @@
   <title><![CDATA[ASINBOW]]></title>
   <link href="http://asinbow.github.com/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-03-28T22:49:45+08:00</updated>
+  <updated>2012-03-28T23:20:06+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[asinbow.wang]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[20120327]]></title>
-    <link href="http://asinbow.github.com/blog/2012/03/28/20120327/"/>
+    <title type="html"><![CDATA[20120328]]></title>
+    <link href="http://asinbow.github.com/blog/2012/03/28/20120328/"/>
     <updated>2012-03-28T23:42:00+08:00</updated>
-    <id>http://asinbow.github.com/blog/2012/03/28/20120327</id>
+    <id>http://asinbow.github.com/blog/2012/03/28/20120328</id>
     <content type="html"><![CDATA[<p>最近总算是见识了一下完全秘薪制的崩盘，
 公司人事忽然间变动了不少，
 原本不必要的损失看来在这次风波中也难以避免了。
@@ -47,6 +47,32 @@ replica set倒是成功了。
 明天发布完毕后，
 会跟上司要一台机器的权限，
 尝试上线一些东西了。</p>
+
+<h3>mongodb notes</h3>
+
+<ul>
+<li>backup
+
+<ul>
+<li><a href="http://www.mongodb.org/display/DOCS/Backups">mongodb backup</a></li>
+<li><a href="https://github.com/micahwedemeyer/automongobackup">auto backup stuff from github</a></li>
+<li><a href="http://www.10gen.com/presentations/mongosf-2011/backing-up-mongodb-cluster">backup presentation</a></li>
+</ul>
+</li>
+<li>security
+
+<ul>
+<li><a href="http://www.mongodb.org/display/DOCS/Security+and+Authentication">mongodb security</a></li>
+</ul>
+</li>
+<li>sharding
+
+<ul>
+<li><a href="http://www.mongodb.org/display/DOCS/Sharding">mongodb sharding</a></li>
+</ul>
+</li>
+</ul>
+
 ]]></content>
   </entry>
   
