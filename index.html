@@ -9,12 +9,14 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="最近总算是见识了一下完全秘薪制的崩盘，
-公司人事忽然间变动了不少，
-原本不必要的损失看来在这次风波中也难以避免了。
-这个引出的问题就是，
-在一个不断变大的公司里面，
-完全的秘薪制是否真的能够降低成本？ 显然事情决没有这么简单。 今天上午把avatar服装的问题踢给了新来的美术同事， &hellip;">
+  <meta name="description" content="今日进展 上午折腾mongodb的集群的搭建，
+最终结果不错，
+在自己的本地完成了最小集群的互联。
+下面一步，
+应该就是要实现sharding，
+现在还不知道mongoid如何在sharding方面和mongos互通。 下午的时候，
+想把这些天折腾mongodb的东西记录下来，
+以便日后和同事分享 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -69,6 +71,73 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/28/20120330/">20120330</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-28T23:42:00+08:00" pubdate data-updated="true">Mar 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>今日进展</h3>
+
+<p>上午折腾mongodb的集群的搭建，
+最终结果不错，
+在自己的本地完成了最小集群的互联。
+下面一步，
+应该就是要实现sharding，
+现在还不知道mongoid如何在sharding方面和mongos互通。</p>
+
+<p>下午的时候，
+想把这些天折腾mongodb的东西记录下来，
+以便日后和同事分享，
+于是尝试做幻灯片。
+零散地整理了一些，
+不过不多。</p>
+
+<hr />
+
+<h3>明天开始</h3>
+
+<ul>
+<li>学习如何管理mongodb的sharding<br/>
+  阅读<a href="http://www.mongodb.org/display/DOCS/Sharding">mongodb官方的文档</a>。
+有一本不错的书，
+叫作<em><a href="http://shop.oreilly.com/product/0636920018308.do">Scaling Mongodb</a></em>，
+之前很多不解，
+现有随着对mongodb的逐渐深入，
+应该能够看得明白。在<a href="http://blog.nosqlfan.com/books">这里</a>可以获取。</li>
+<li>看明白mongoid中的sharding key是如何映射到mongodb集群中去的。</li>
+<li>将mongodb集成到现有的java代码中去，刚好用心看一下java。</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -670,66 +739,6 @@ erlang的现有代码结构被我狂改了一通，
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/06/20120206/">20120206</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-06T22:25:32+08:00" pubdate data-updated="true">Feb 6<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>总结和计划：</h3>
-
-<p>旱晨到公司，
-落地先解决了自己私下里发现的ruby服务器的bug，
-然后修改了erlang服务器一些配置。
-然后就是开始erlang的gen_server，
-一直到下午开会，
-期间不断记下一些细碎的任务。</p>
-
-<p>开会的时候，
-确定了我个人的一个新的大任务，
-就是把一个单点sever从ruby迁移到erlang。
-估计难度会比较大，
-不过肯定会搞定。</p>
-
-<p>明天到公司后先那些细碎的任务先解决，
-然后正式转入erlang单点sever的开发。</p>
-
-<p>感觉今天还是很充实的，
-这两天开发erlang服务器的时候，
-估计会学到不少东西的。</p>
-
-<p>现在每天花了不少时间在微博，
-看看消息，
-转转消息。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -745,6 +754,10 @@ erlang的现有代码结构被我狂改了一通，
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/03/28/20120330/">20120330</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/03/28/20120328/">20120328</a>
       </li>
     
@@ -758,10 +771,6 @@ erlang的现有代码结构被我狂改了一通，
     
       <li class="post">
         <a href="/blog/2012/03/02/20120301/">20120301</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/02/28/20120228/">20120228</a>
       </li>
     
   </ul>

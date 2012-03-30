@@ -5,17 +5,18 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>20120203 - ASINBOW</title>
+  <title>20120330 - ASINBOW</title>
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="总结： 这两天主要做的事情是把fiber_time_trace的问题解决，
-以及适当更改clog的server的代码，
-以保证运作正常。 fiber_time_trace的问题比较头疼，
-最终发现是因为绕了个弯子；
-照原来的代码模仿下来之后，
-没想到一部分特殊的代码使用了隐藏路径，
-查了半天， &hellip;">
+  <meta name="description" content="今日进展 上午折腾mongodb的集群的搭建，
+最终结果不错，
+在自己的本地完成了最小集群的互联。
+下面一步，
+应该就是要实现sharding，
+现在还不知道mongoid如何在sharding方面和mongos互通。 下午的时候，
+想把这些天折腾mongodb的东西记录下来，
+以便日后和同事分享 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +25,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://asinbow.github.com/blog/2012/02/03/20120203">
+  <link rel="canonical" href="http://asinbow.github.com/blog/2012/03/28/20120330">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -73,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">20120203</h1>
+      <h1 class="entry-title">20120330</h1>
     
     
       <p class="meta">
@@ -89,52 +90,45 @@
   
 
 
-<time datetime="2012-02-03T23:14:40+08:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2012</time>
+<time datetime="2012-03-28T23:42:00+08:00" pubdate data-updated="true">Mar 28<span>th</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3>总结：</h3>
+<div class="entry-content"><h3>今日进展</h3>
 
-<p>这两天主要做的事情是把fiber_time_trace的问题解决，
-以及适当更改clog的server的代码，
-以保证运作正常。</p>
+<p>上午折腾mongodb的集群的搭建，
+最终结果不错，
+在自己的本地完成了最小集群的互联。
+下面一步，
+应该就是要实现sharding，
+现在还不知道mongoid如何在sharding方面和mongos互通。</p>
 
-<p>fiber_time_trace的问题比较头疼，
-最终发现是因为绕了个弯子；
-照原来的代码模仿下来之后，
-没想到一部分特殊的代码使用了隐藏路径，
-查了半天，发现的时候简直吐血了。</p>
+<p>下午的时候，
+想把这些天折腾mongodb的东西记录下来，
+以便日后和同事分享，
+于是尝试做幻灯片。
+零散地整理了一些，
+不过不多。</p>
 
-<p>clog的server的代码现在运行下来还是不错的，
-不过我做的时候主要还是套用现有代码做的，
-完成以后感觉自己还是对erlang东西学习得不够深入。
-针对这个这两天需要学习下面两个方面的内容：
-一是erlang的binary操作，
-二是gen_server的整个体系。
-另外，
-还需要多体会erlang的编程风格，
-当然，
-这个过程得多写代码了。</p>
+<hr />
 
-<h3>还有一个小计划：</h3>
+<h3>明天开始</h3>
 
-<p>学习五笔输入法，
-我记得大一的时候学过这玩意儿的，
-后来就不常用了。</p>
+<ul>
+<li>学习如何管理mongodb的sharding<br/>
+  阅读<a href="http://www.mongodb.org/display/DOCS/Sharding">mongodb官方的文档</a>。
+有一本不错的书，
+叫作<em><a href="http://shop.oreilly.com/product/0636920018308.do">Scaling Mongodb</a></em>，
+之前很多不解，
+现有随着对mongodb的逐渐深入，
+应该能够看得明白。在<a href="http://blog.nosqlfan.com/books">这里</a>可以获取。</li>
+<li>看明白mongoid中的sharding key是如何映射到mongodb集群中去的。</li>
+<li>将mongodb集成到现有的java代码中去，刚好用心看一下java。</li>
+</ul>
 
-<p>主要是不和人聊天。
-悲催～
-这次重新学习这个主要是为了学东西的时候快一点，
-像现在用拼音输入法一个一个的选来选取，
-累挺。</p>
-
-<p>今天背了一部分字根，
-应该不会太难，
-因为只是复习而已。
-周末抽时间完成上面一部分内容。</p>
 </div>
 
 
@@ -157,7 +151,7 @@
   
 
 
-<time datetime="2012-02-03T23:14:40+08:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2012</time>
+<time datetime="2012-03-28T23:42:00+08:00" pubdate data-updated="true">Mar 28<span>th</span>, 2012</time>
       
 
 
@@ -172,10 +166,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/01/30/20120130/" title="Previous Post: 20120130工作进展">&laquo; 20120130工作进展</a>
+        <a class="basic-alignment left" href="/blog/2012/03/28/20120328/" title="Previous Post: 20120328">&laquo; 20120328</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/05/20120205/" title="Next Post: 20120205">20120205 &raquo;</a>
       
     </p>
   </footer>

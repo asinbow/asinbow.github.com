@@ -4,7 +4,7 @@
   <title><![CDATA[ASINBOW]]></title>
   <link href="http://asinbow.github.com/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-03-28T23:20:06+08:00</updated>
+  <updated>2012-03-30T21:19:38+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[asinbow.wang]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[20120330]]></title>
+    <link href="http://asinbow.github.com/blog/2012/03/28/20120330/"/>
+    <updated>2012-03-28T23:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/03/28/20120330</id>
+    <content type="html"><![CDATA[<h3>今日进展</h3>
+
+<p>上午折腾mongodb的集群的搭建，
+最终结果不错，
+在自己的本地完成了最小集群的互联。
+下面一步，
+应该就是要实现sharding，
+现在还不知道mongoid如何在sharding方面和mongos互通。</p>
+
+<p>下午的时候，
+想把这些天折腾mongodb的东西记录下来，
+以便日后和同事分享，
+于是尝试做幻灯片。
+零散地整理了一些，
+不过不多。</p>
+
+<hr />
+
+<h3>明天开始</h3>
+
+<ul>
+<li>学习如何管理mongodb的sharding<br/>
+  阅读<a href="http://www.mongodb.org/display/DOCS/Sharding">mongodb官方的文档</a>。
+有一本不错的书，
+叫作<em><a href="http://shop.oreilly.com/product/0636920018308.do">Scaling Mongodb</a></em>，
+之前很多不解，
+现有随着对mongodb的逐渐深入，
+应该能够看得明白。在<a href="http://blog.nosqlfan.com/books">这里</a>可以获取。</li>
+<li>看明白mongoid中的sharding key是如何映射到mongodb集群中去的。</li>
+<li>将mongodb集成到现有的java代码中去，刚好用心看一下java。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[20120328]]></title>
