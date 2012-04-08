@@ -9,13 +9,13 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="总结和计划： 旱晨到公司，
-落地先解决了自己私下里发现的ruby服务器的bug，
-然后修改了erlang服务器一些配置。
-然后就是开始erlang的gen_server，
-一直到下午开会，
-期间不断记下一些细碎的任务。 开会的时候，
-确定了我个人的一个新的大任务， &hellip;">
+  <meta name="description" content="进展： 解决了几个细碎的问题，
+但是service的cpu消耗和fiber切换报告还没有出来，
+这个不是很满意。
+为开发模式增加了定制广播消息的功能。 修改了个人主页，
+修复了现有的bug，
+悲剧的是期间客户端开发人人员偷偷修改了几个文件的路径，
+来回折腾了好几趟。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -63,6 +63,7 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/articles">Articles</a></li>
 </ul>
 
 </nav>
@@ -70,6 +71,61 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/08/20120208/">20120208</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-08T22:07:28+08:00" pubdate data-updated="true">Feb 8<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>进展：</h3>
+
+<p>解决了几个细碎的问题，
+但是service的cpu消耗和fiber切换报告还没有出来，
+这个不是很满意。
+为开发模式增加了定制广播消息的功能。</p>
+
+<p>修改了个人主页，
+修复了现有的bug，
+悲剧的是期间客户端开发人人员偷偷修改了几个文件的路径，
+来回折腾了好几趟。</p>
+
+<p>然后开始尝试那个单点server的erlang重写。
+下午的时候向同事请教了一下相关问题，
+只能说是初步了解了结构。</p>
+
+<h3>计划：</h3>
+
+<p>完成那个报告。<br/>
+专心erlang server的开发，紧凑地安排时间。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -446,7 +502,11 @@ erlang的动态更新代码还不太会，
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/03/28/20120330/">20120330</a>
+        <a href="/blog/2012/04/06/20120406/">20120406 whole week</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/30/20120330/">20120330</a>
       </li>
     
       <li class="post">
@@ -459,10 +519,6 @@ erlang的动态更新代码还不太会，
     
       <li class="post">
         <a href="/blog/2012/03/03/vimium-introduction/">vimium——chrome下不错的vim式插件</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/02/20120301/">20120301</a>
       </li>
     
   </ul>

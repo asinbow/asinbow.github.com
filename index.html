@@ -9,14 +9,14 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="今日进展 上午折腾mongodb的集群的搭建，
-最终结果不错，
-在自己的本地完成了最小集群的互联。
-下面一步，
-应该就是要实现sharding，
-现在还不知道mongoid如何在sharding方面和mongos互通。 下午的时候，
-想把这些天折腾mongodb的东西记录下来，
-以便日后和同事分享 &hellip;">
+  <meta name="description" content="本周进展 本周总共工作两天，
+主要是好好考量了一下MongoDB的sharding，
+并开始了尝试把一部分数据用MongDB存储。
+这个下周要保证能够上线。 下周目标 周一要完成MongoDB对部分数据的应用，
+并完成大部分测试，
+这一部分内容要抓紧，
+因为周一还要开会，
+还要打球。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,7 @@
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/articles">Articles</a></li>
 </ul>
 
 </nav>
@@ -77,7 +78,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2012/03/28/20120330/">20120330</a></h1>
+      <h1 class="entry-title"><a href="/blog/2012/04/06/20120406/">20120406 Whole Week</a></h1>
     
     
       <p class="meta">
@@ -93,7 +94,75 @@
   
 
 
-<time datetime="2012-03-28T23:42:00+08:00" pubdate data-updated="true">Mar 28<span>th</span>, 2012</time>
+<time datetime="2012-04-06T23:42:00+08:00" pubdate data-updated="true">Apr 6<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>本周进展</h3>
+
+<p>本周总共工作两天，
+主要是好好考量了一下<code>MongoDB</code>的<code>sharding</code>，
+并开始了尝试把一部分数据用MongDB存储。
+这个下周要保证能够上线。</p>
+
+<h3>下周目标</h3>
+
+<p>周一要完成<code>MongoDB</code>对部分数据的应用，
+并完成大部分测试，
+这一部分内容要抓紧，
+因为周一还要开会，
+还要打球。</p>
+
+<p>周二上午提交这部分代码，
+并将这部分修改报告给QA。</p>
+
+<h3>注意事项</h3>
+
+<ul>
+<li>压力测试
+
+<ul>
+<li><code>MongoDB</code>的连接数多少合适？</li>
+<li>对于不需要<code>MongoDB</code>的<code>server</code>，
+避免打开连接。</li>
+</ul>
+</li>
+<li>预先安装<code>MongoDB</code>到外网，
+搭建<code>Replica Set</code>。</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/30/20120330/">20120330</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-30T23:42:00+08:00" pubdate data-updated="true">Mar 30<span>th</span>, 2012</time>
         
       </p>
     
@@ -684,61 +753,6 @@ erlang的现有代码结构被我狂改了一通，
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/02/08/20120208/">20120208</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-02-08T22:07:28+08:00" pubdate data-updated="true">Feb 8<span>th</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>进展：</h3>
-
-<p>解决了几个细碎的问题，
-但是service的cpu消耗和fiber切换报告还没有出来，
-这个不是很满意。
-为开发模式增加了定制广播消息的功能。</p>
-
-<p>修改了个人主页，
-修复了现有的bug，
-悲剧的是期间客户端开发人人员偷偷修改了几个文件的路径，
-来回折腾了好几趟。</p>
-
-<p>然后开始尝试那个单点server的erlang重写。
-下午的时候向同事请教了一下相关问题，
-只能说是初步了解了结构。</p>
-
-<h3>计划：</h3>
-
-<p>完成那个报告。<br/>
-专心erlang server的开发，紧凑地安排时间。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -754,7 +768,11 @@ erlang的现有代码结构被我狂改了一通，
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2012/03/28/20120330/">20120330</a>
+        <a href="/blog/2012/04/06/20120406/">20120406 whole week</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/03/30/20120330/">20120330</a>
       </li>
     
       <li class="post">
@@ -767,10 +785,6 @@ erlang的现有代码结构被我狂改了一通，
     
       <li class="post">
         <a href="/blog/2012/03/03/vimium-introduction/">vimium——chrome下不错的vim式插件</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/02/20120301/">20120301</a>
       </li>
     
   </ul>

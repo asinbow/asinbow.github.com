@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: diary | ASINBOW]]></title>
+  <link href="http://asinbow.github.com/blog/categories/diary/atom.xml" rel="self"/>
+  <link href="http://asinbow.github.com/"/>
+  <updated>2012-04-08T22:27:14+08:00</updated>
+  <id>http://asinbow.github.com/</id>
+  <author>
+    <name><![CDATA[asinbow.wang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[20120130工作进展]]></title>
+    <link href="http://asinbow.github.com/blog/2012/01/30/20120130/"/>
+    <updated>2012-01-30T22:11:26+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/01/30/20120130</id>
+    <content type="html"><![CDATA[<p>早晨刚到的时候谋划开始写erlang的那个log server，
+面临的最大问题是现有的代码还不太熟悉。</p>
+
+<p>刚开始一会儿就开了晨会，
+所有这两天就开始上班的同事聚在一起。
+开会的时候觉得上次的那个Fiber time的问题还没有解决，
+回到办公桌上搞了一会儿，
+发现不是我想得那么简单，
+暂时放下了。</p>
+
+<p>于是接着继续整erlang，
+最为纠结的就是究竟用不用现有结构，
+以及怎么用。
+左右摇摆，
+最终还是使用了现有结构。
+到6点钟的时候，
+程序编译通过了，
+接着有一部分跑通了。
+明天过去继续调通其余部分。</p>
+
+<p>现在比较麻烦的是，
+erlang的动态更新代码还不太会，
+编译调试，
+然后都比较慢。
+明天早上到公司先弄明白这个，
+所谓磨刀*****。</p>
+
+<p>过一会儿就睡了。</p>
+]]></content>
+  </entry>
+  
+</feed>

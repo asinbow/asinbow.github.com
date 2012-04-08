@@ -4,7 +4,7 @@
   <title><![CDATA[ASINBOW]]></title>
   <link href="http://asinbow.github.com/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-03-30T21:19:38+08:00</updated>
+  <updated>2012-04-08T22:27:14+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[asinbow.wang]]></name>
@@ -14,10 +14,51 @@
 
   
   <entry>
+    <title type="html"><![CDATA[20120406 whole week]]></title>
+    <link href="http://asinbow.github.com/blog/2012/04/06/20120406/"/>
+    <updated>2012-04-06T23:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/04/06/20120406</id>
+    <content type="html"><![CDATA[<h3>本周进展</h3>
+
+<p>本周总共工作两天，
+主要是好好考量了一下<code>MongoDB</code>的<code>sharding</code>，
+并开始了尝试把一部分数据用MongDB存储。
+这个下周要保证能够上线。</p>
+
+<h3>下周目标</h3>
+
+<p>周一要完成<code>MongoDB</code>对部分数据的应用，
+并完成大部分测试，
+这一部分内容要抓紧，
+因为周一还要开会，
+还要打球。</p>
+
+<p>周二上午提交这部分代码，
+并将这部分修改报告给QA。</p>
+
+<h3>注意事项</h3>
+
+<ul>
+<li>压力测试
+
+<ul>
+<li><code>MongoDB</code>的连接数多少合适？</li>
+<li>对于不需要<code>MongoDB</code>的<code>server</code>，
+避免打开连接。</li>
+</ul>
+</li>
+<li>预先安装<code>MongoDB</code>到外网，
+搭建<code>Replica Set</code>。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[20120330]]></title>
-    <link href="http://asinbow.github.com/blog/2012/03/28/20120330/"/>
-    <updated>2012-03-28T23:42:00+08:00</updated>
-    <id>http://asinbow.github.com/blog/2012/03/28/20120330</id>
+    <link href="http://asinbow.github.com/blog/2012/03/30/20120330/"/>
+    <updated>2012-03-30T23:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/03/30/20120330</id>
     <content type="html"><![CDATA[<h3>今日进展</h3>
 
 <p>上午折腾mongodb的集群的搭建，
