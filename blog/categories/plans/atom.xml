@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: plans | ASINBOW]]></title>
+  <link href="http://asinbow.github.com/blog/categories/plans/atom.xml" rel="self"/>
+  <link href="http://asinbow.github.com/"/>
+  <updated>2012-05-01T20:32:41+08:00</updated>
+  <id>http://asinbow.github.com/</id>
+  <author>
+    <name><![CDATA[asinbow.wang]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[20120501计划]]></title>
+    <link href="http://asinbow.github.com/blog/2012/05/01/20120501/"/>
+    <updated>2012-05-01T18:30:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/05/01/20120501</id>
+    <content type="html"><![CDATA[<h3></h3>
+
+<p>已经好久没有写日记了，
+主要还是自己的毛病。
+一个是过于懒惰，
+再则是容易受到干扰。</p>
+
+<p>四月下来，
+工作主体内容是MongoDB，
+现在公司的MongoDB已经上线了两个星期了，
+看起来还是压力不大，
+不过之后还要进一步调优。</p>
+
+<p>下周的任务会比较多</p>
+
+<ul>
+<li>动态的Server切换（最好是连接不断）</li>
+<li>为public的连接增加In/Out流量记数、
+In/Out通信交互次数记数，
+在连接断开的时候记入日志。</li>
+<li>支持语音UGC的开发，
+需要VC++开发。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

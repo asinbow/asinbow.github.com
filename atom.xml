@@ -4,7 +4,7 @@
   <title><![CDATA[ASINBOW]]></title>
   <link href="http://asinbow.github.com/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-04-08T22:27:14+08:00</updated>
+  <updated>2012-05-01T20:32:41+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[asinbow.wang]]></name>
@@ -12,6 +12,126 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[20120501计划]]></title>
+    <link href="http://asinbow.github.com/blog/2012/05/01/20120501/"/>
+    <updated>2012-05-01T18:30:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/05/01/20120501</id>
+    <content type="html"><![CDATA[<h3></h3>
+
+<p>已经好久没有写日记了，
+主要还是自己的毛病。
+一个是过于懒惰，
+再则是容易受到干扰。</p>
+
+<p>四月下来，
+工作主体内容是MongoDB，
+现在公司的MongoDB已经上线了两个星期了，
+看起来还是压力不大，
+不过之后还要进一步调优。</p>
+
+<p>下周的任务会比较多</p>
+
+<ul>
+<li>动态的Server切换（最好是连接不断）</li>
+<li>为public的连接增加In/Out流量记数、
+In/Out通信交互次数记数，
+在连接断开的时候记入日志。</li>
+<li>支持语音UGC的开发，
+需要VC++开发。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[儿童游戏产品——有趣？]]></title>
+    <link href="http://asinbow.github.com/blog/2012/04/09/kids-game-instresting-trap/"/>
+    <updated>2012-04-09T23:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/04/09/kids-game-instresting-trap</id>
+    <content type="html"><![CDATA[<h3>引言</h3>
+
+<p>在我所知的范围内，
+似乎大家都把有趣性作为针对儿童的游戏的终极追求，
+现在这个似乎是没有问题的，
+各大相关网站也是这么个套路。
+但是大家互相比下来，
+虽然各有用户群，
+但是都没有给整个行业带来颠覆性的影响。</p>
+
+<p>这些让我觉得大家都已经陷进去了。</p>
+
+<h3>为什么做游戏？</h3>
+
+<p>从事这个的行业的大多数人都是没有想过这个问题的，
+或许你能得到的最多的答案就是：
+干这个能够有钱赚。
+而且，这个“钱”还不是愿意掏钱的客户手中的钱，
+到目前为止，很多还只是投资人的钱。</p>
+
+<p>这个会不会就是投资人最大的困境？
+钱都烧在一帮并不热爱手中活计的人的身上？</p>
+
+<p><font color="red"><em>(未完)</em></font></p>
+
+<h3>让儿童觉得有趣，这个真的太肤浅</h3>
+
+<h3>游戏应该定位为文化产品，而文化产品就是让人来崇拜的</h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[儿童产品，请避开智力开发]]></title>
+    <link href="http://asinbow.github.com/blog/2012/04/06/kids-game-no-intellegence-develop/"/>
+    <updated>2012-04-06T23:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/04/06/kids-game-no-intellegence-develop</id>
+    <content type="html"><![CDATA[<h3></h3>
+
+<p><font color="red"><em>(未开始)</em></font></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[20120406 whole week]]></title>
+    <link href="http://asinbow.github.com/blog/2012/04/06/20120406/"/>
+    <updated>2012-04-06T23:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/04/06/20120406</id>
+    <content type="html"><![CDATA[<h3>本周进展</h3>
+
+<p>本周总共工作两天，
+主要是好好考量了一下<code>MongoDB</code>的<code>sharding</code>，
+并开始了尝试把一部分数据用MongDB存储。
+这个下周要保证能够上线。</p>
+
+<h3>下周目标</h3>
+
+<p>周一要完成<code>MongoDB</code>对部分数据的应用，
+并完成大部分测试，
+这一部分内容要抓紧，
+因为周一还要开会，
+还要打球。</p>
+
+<p>周二上午提交这部分代码，
+并将这部分修改报告给QA。</p>
+
+<h3>注意事项</h3>
+
+<ul>
+<li>压力测试
+
+<ul>
+<li><code>MongoDB</code>的连接数多少合适？</li>
+<li>对于不需要<code>MongoDB</code>的<code>server</code>，
+避免打开连接。</li>
+</ul>
+</li>
+<li>预先安装<code>MongoDB</code>到外网，
+搭建<code>Replica Set</code>。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[20120406 whole week]]></title>
@@ -609,43 +729,6 @@ erlang的动态更新代码还不太会，
 <h4>七、常回家看看。</h4>
 
 <h4>八、坚持写作，甭管多烂。</h4>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[我相信什么？]]></title>
-    <link href="http://asinbow.github.com/blog/2012/01/22/what-i-believe/"/>
-    <updated>2012-01-22T23:28:23+08:00</updated>
-    <id>http://asinbow.github.com/blog/2012/01/22/what-i-believe</id>
-    <content type="html"><![CDATA[<p><span style="font-size:16px;">最近，有些事情足够充分的让我意识到，我，已经事实上是一个近中年的人了。而这显然已经不是一个简单的年龄问题，而是一个社会年龄问题。我应该往上移步一个台阶了。</span></p>
-
-
-<p><span style="font-size:16px;">其实，给这篇本来定的题目是《你相信什么？》，但是写完第一段就已经觉得不妥了&mdash;&mdash;我从来没有厉声责问他人的这种问题的权利，我只能责问我自己，我过去、现在和将来相信什么？眼看着要移步一个台阶的年纪，这个问题尤其尖锐苛刻。</span></p>
-
-
-<p><span style="font-size:16px;">现在的我（也许从很早以前就开始了），已将生命视为宿命，我相信上天会给我所有我应该有的东西，苦难，伤痛，责任，幸福，快乐，凡此总总，避是避不开的，求是求不来的，一切皆应当在寂静中承受。善未必有善报，恶未必有恶报，这个才是真的血淋淋的现实，所以佛祖发明了来世，并教人信了它，以使人们趋善。这些是佛祖的骗局，或者只是众佛陀们的以讹传讹，或者极乐世界搞精神文明建设文化部门删掉那些劝人作恶的东西，或者只是佛经印漏了什么，我丝毫没有兴趣，因为这些都不重要。重要的是，对于我这个奔三的人，那些曾经和现在相信的东西，都将经历生命中严酷的考验。</span></p>
-
-
-<p><span style="font-size:16px;">过去一年，我最开心的事情是和女朋友的相处。我说的不是那过去的每一天，而是整个这个从头到尾、断断续续的过程。爱情需要平平淡淡，但是不需要天天平平淡淡；爱情需要过山车，但不需要天天过山车；爱情需要麻辣烫，但是不需要天天麻辣烫&hellip;&hellip;说实话，这里面，哪样多了，我都会烦。这个过程最大程度地印证了我两个观点，一是找女朋友，需要看的是内质，而不是学历、身高、容貌，当然这些也会是一个因素，但那些只是偏好，而不是一个什么真真正正的标准。偏好就是去麦当劳或者肯德基挑选小杯可乐、中杯可乐还是大杯可乐，标准是说那里面是可乐，而不是地沟油、剧毒甲胺磷。学历、身高、容貌，胸大不大，屁股圆不圆，兰花指，金玉足，丹凤眼，这些显然都是某种偏好。另一个观点，就是尽量少帮爱人解决问题，任何时候，只要让她知道你在背后就行了；这东西，承担的愈多，自己愈累，爱情愈是陷入泥沼。</span></p>
-
-
-<p><span style="font-size:16px;">迄今为止遇到的事情验证了这两个观点，为此我很得意：因为那些是我相信的。唯一忧虑的是，为此高兴到我这个年纪，也该画个句号了，因为有更多的考验将劈头盖脸打过来。</span></p>
-
-
-<p><span style="font-size:16px;">我 相信&nbsp;人人平等，每个人都应该有足够的私权，以行使自己基本的自由；我 相信&nbsp;人己权界，即使最亲近的人，也要尊重其自由意志；我 相信&nbsp;死刑应当废除，我们熟知的这个世界充斥的并不是罪恶的横行，而是善良的窒息，而即便对待一个真正的毫无疑问的穷凶极恶的罪人，剥夺其生命却并不是毫无疑问的；我 相信&nbsp;国家是公共领域，而非一人或者一党之私，每个人都有参与的权利；我还相信善终究会战胜恶&hellip;&hellip;</span></p>
-
-
-<p><span style="font-size:16px;">我将需要在赚钱之余坚持这些我相信的东西。</span><span style="font-size: 16px; ">偷偷说一下，我还相信我的手中最终会有选票！</span></p>
-
-
-<p><span style="font-size:16px;"><br />
-    </span></p>
-
-
-<p><span style="font-size:16px;">2012年除夕23时26分</span></p>
-
-
-
 ]]></content>
   </entry>
   

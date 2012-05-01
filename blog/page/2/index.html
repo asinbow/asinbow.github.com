@@ -9,13 +9,7 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="进展： 解决了几个细碎的问题，
-但是service的cpu消耗和fiber切换报告还没有出来，
-这个不是很满意。
-为开发模式增加了定制广播消息的功能。 修改了个人主页，
-修复了现有的bug，
-悲剧的是期间客户端开发人人员偷偷修改了几个文件的路径，
-来回折腾了好几趟。 &hellip;">
+  <meta name="description" content="今天发工资，不过我新办的银行卡没有登记到公司那边，没有发到。等一两天吧。 erlang： 1. try catch还有一个after，理解每个runtime exception，throw error exit. 2. 有时间继续学习erlang data structures。 3. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +65,286 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/28/20120228/">20120228</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-28T23:44:40+08:00" pubdate data-updated="true">Feb 28<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天发工资，不过我新办的银行卡没有登记到公司那边，没有发到。等一两天吧。</p>
+
+
+<p>erlang：</p>
+
+
+<p>1. try catch还有一个after，理解每个runtime exception，throw error exit.</p>
+
+
+<p>2. 有时间继续学习<a href="http://learnyousomeerlang.com/a-short-visit-to-common-data-structures#key-value-stores">erlang data structures</a>。</p>
+
+
+<p>3. erlang的动态特性还能发掘多少？</p>
+
+
+<p>4. 我设计的service有点问题，明天改好。</p>
+
+
+<p>5. 明天还得和同事协商解决一个问题，拖了一天的。</p>
+
+
+<p>6. 明天算是正式开始instance manager逻辑的迁移。</p>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/24/20120224/">20120224</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-24T23:47:34+08:00" pubdate data-updated="true">Feb 24<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>erlang使用总结：</h3>
+
+<p>使用erlang也有一段时间了，
+感觉这个语言还是很特别的，
+有一些感触，
+随便写写。</p>
+
+<p>如果一个gen_server有较高的并发需求，
+在handle_*函数里面一定减少代码，
+要尽量快的更新state，
+然后转向下一条消息的处理。
+这个是因为，
+gen_server的消息处理实际上就是erlang本身内建的那个。
+所有消息都是依次处理的，
+如何减少handle_*函数中的代码量，
+是高并发的秘诀。
+所有的和更新state无关的代码都应该spawn一个新的process去做。</p>
+
+<p>需要一个自定义的spawn，
+进入这个函数的时候，
+自动做一些复制的事情，
+这样可以使得lager之类的依赖进程局部存储的库工作正常。</p>
+
+<p>erlang的macro并不强大，
+开发过程中发现并不如意，
+考虑把一部分的macro变成函数，
+以保持代码的可读性。</p>
+
+<p>现在主攻的一块代码的逻辑需要还是比较清析的，
+但是写出的代码却无法表达出范式，
+虽然明显有类似逻辑。
+看来对函数式编程还是不够参透，
+明天的一个主要目标就是抽取范式，
+可能会借助macro，
+但是不能滥用。</p>
+
+<p>今天还有一个收获，
+就是学习了erlang的各种数据容器，
+明白了不少选取合适容器的依据。</p>
+
+<h2>明天的目标：</h2>
+
+<blockquote><ul>
+<li>自定义的spawn。</li>
+<li>迁移macro到函数。</li>
+<li>抽取request handler的范式，改善现有代码。</li>
+<li>实现block_request, async_request和push_request的逻辑。</li>
+<li>测试简单的请求发送和接收，包括as client to cloud和as server to battle。</li>
+</ul>
+</blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/21/20120221/">20120221</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-21T22:10:49+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>进展：</h3>
+
+<p>这两天的工作进展相当缓慢，
+erlang的现有代码结构被我狂改了一通，
+已经面目全非了，
+好在测试通得过。</p>
+
+<p>修改的主要目的是引入类似于面向对象语言的编程方式，
+或者说是ruby的mixin。
+设计初衷是基本达到了，
+只是在数据如何存储方面犹豫再三，
+实在没有主张。</p>
+
+<p>现在的代码已经能够发起并建立连接了——
+嗯，好在比昨天前进了一步，
+不然太他妈的没面子了。</p>
+
+<h3>明天的目标：</h3>
+
+<ul>
+<li><p>1、实现发送ticket建立adim连接。</p></li>
+<li><p>2、在1的基础上，完成request模型。<br/>
+包括request_id, request_handler, request_callback, timeout, non-block process。
+其他方面就爱咋咋吧。</p></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/02/12/20120212/">20120212</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-02-12T22:41:19+08:00" pubdate data-updated="true">Feb 12<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>进展：</h3>
+
+<p>下午到公司解决了这两天一直在想的一个erlang的配置问题。
+然后给现在的开发增加了一个辅助功能。</p>
+
+<h3>总结：</h3>
+
+<p>现在感觉对erlang的编程模式还不是太深入，
+在写代码的时候，
+总是在不同的数据结构和编程模型之间摇摆不定。</p>
+
+<p>看起来还是要多多实践啊。</p>
+
+<h3>erlang</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='erlang'><span class='line'>    <span class="n">start_link</span><span class="p">(</span><span class="nv">Module</span><span class="p">,</span> <span class="nv">Args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">startlink_ret</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">start_link</span><span class="p">(</span><span class="nv">SupName</span><span class="p">,</span> <span class="nv">Module</span><span class="p">,</span> <span class="nv">Args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">startlink_ret</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nv">SupName</span> <span class="o">=</span> <span class="n">sup_name</span><span class="p">()</span>
+</span><span class='line'>    <span class="nv">Module</span> <span class="o">=</span> <span class="n">module</span><span class="p">()</span>
+</span><span class='line'>    <span class="nv">Args</span> <span class="o">=</span> <span class="n">term</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">startlink_ret</span><span class="p">()</span> <span class="o">=</span> <span class="p">{</span><span class="n">ok</span><span class="p">,</span> <span class="n">pid</span><span class="p">()}</span>
+</span><span class='line'>                    <span class="p">|</span> <span class="n">ignore</span>
+</span><span class='line'>                    <span class="p">|</span> <span class="p">{</span><span class="n">error</span><span class="p">,</span> <span class="n">startlink_err</span><span class="p">()}</span>
+</span><span class='line'>    <span class="n">startlink_err</span><span class="p">()</span> <span class="o">=</span> <span class="p">{</span><span class="n">already_started</span><span class="p">,</span> <span class="n">pid</span><span class="p">()}</span> <span class="p">|</span> <span class="n">shutdown</span> <span class="p">|</span> <span class="n">term</span><span class="p">()</span>
+</span><span class='line'>    <span class="n">sup_name</span><span class="p">()</span> <span class="o">=</span> <span class="p">{</span><span class="n">local</span><span class="p">,</span> <span class="nv">Name</span> <span class="p">::</span> <span class="n">atom</span><span class="p">()}</span> <span class="p">|</span> <span class="p">{</span><span class="n">global</span><span class="p">,</span> <span class="nv">Name</span> <span class="p">::</span> <span class="n">atom</span><span class="p">()}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -423,71 +697,9 @@ erlang的动态更新代码还不太会，
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/22/what-i-believe/">我相信什么？</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-22T23:28:23+08:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><span style="font-size:16px;">最近，有些事情足够充分的让我意识到，我，已经事实上是一个近中年的人了。而这显然已经不是一个简单的年龄问题，而是一个社会年龄问题。我应该往上移步一个台阶了。</span></p>
-
-
-<p><span style="font-size:16px;">其实，给这篇本来定的题目是《你相信什么？》，但是写完第一段就已经觉得不妥了&mdash;&mdash;我从来没有厉声责问他人的这种问题的权利，我只能责问我自己，我过去、现在和将来相信什么？眼看着要移步一个台阶的年纪，这个问题尤其尖锐苛刻。</span></p>
-
-
-<p><span style="font-size:16px;">现在的我（也许从很早以前就开始了），已将生命视为宿命，我相信上天会给我所有我应该有的东西，苦难，伤痛，责任，幸福，快乐，凡此总总，避是避不开的，求是求不来的，一切皆应当在寂静中承受。善未必有善报，恶未必有恶报，这个才是真的血淋淋的现实，所以佛祖发明了来世，并教人信了它，以使人们趋善。这些是佛祖的骗局，或者只是众佛陀们的以讹传讹，或者极乐世界搞精神文明建设文化部门删掉那些劝人作恶的东西，或者只是佛经印漏了什么，我丝毫没有兴趣，因为这些都不重要。重要的是，对于我这个奔三的人，那些曾经和现在相信的东西，都将经历生命中严酷的考验。</span></p>
-
-
-<p><span style="font-size:16px;">过去一年，我最开心的事情是和女朋友的相处。我说的不是那过去的每一天，而是整个这个从头到尾、断断续续的过程。爱情需要平平淡淡，但是不需要天天平平淡淡；爱情需要过山车，但不需要天天过山车；爱情需要麻辣烫，但是不需要天天麻辣烫&hellip;&hellip;说实话，这里面，哪样多了，我都会烦。这个过程最大程度地印证了我两个观点，一是找女朋友，需要看的是内质，而不是学历、身高、容貌，当然这些也会是一个因素，但那些只是偏好，而不是一个什么真真正正的标准。偏好就是去麦当劳或者肯德基挑选小杯可乐、中杯可乐还是大杯可乐，标准是说那里面是可乐，而不是地沟油、剧毒甲胺磷。学历、身高、容貌，胸大不大，屁股圆不圆，兰花指，金玉足，丹凤眼，这些显然都是某种偏好。另一个观点，就是尽量少帮爱人解决问题，任何时候，只要让她知道你在背后就行了；这东西，承担的愈多，自己愈累，爱情愈是陷入泥沼。</span></p>
-
-
-<p><span style="font-size:16px;">迄今为止遇到的事情验证了这两个观点，为此我很得意：因为那些是我相信的。唯一忧虑的是，为此高兴到我这个年纪，也该画个句号了，因为有更多的考验将劈头盖脸打过来。</span></p>
-
-
-<p><span style="font-size:16px;">我 相信&nbsp;人人平等，每个人都应该有足够的私权，以行使自己基本的自由；我 相信&nbsp;人己权界，即使最亲近的人，也要尊重其自由意志；我 相信&nbsp;死刑应当废除，我们熟知的这个世界充斥的并不是罪恶的横行，而是善良的窒息，而即便对待一个真正的毫无疑问的穷凶极恶的罪人，剥夺其生命却并不是毫无疑问的；我 相信&nbsp;国家是公共领域，而非一人或者一党之私，每个人都有参与的权利；我还相信善终究会战胜恶&hellip;&hellip;</span></p>
-
-
-<p><span style="font-size:16px;">我将需要在赚钱之余坚持这些我相信的东西。</span><span style="font-size: 16px; ">偷偷说一下，我还相信我的手中最终会有选票！</span></p>
-
-
-<p><span style="font-size:16px;"><br />
-    </span></p>
-
-
-<p><span style="font-size:16px;">2012年除夕23时26分</span></p>
-
-
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -502,23 +714,23 @@ erlang的动态更新代码还不太会，
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/05/01/20120501/">20120501计划</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/09/kids-game-instresting-trap/">儿童游戏产品——有趣？</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/04/06/kids-game-no-intellegence-develop/">儿童产品，请避开智力开发</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/04/06/20120406/">20120406 whole week</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2012/03/30/20120330/">20120330</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/28/20120328/">20120328</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/14/migrate-to-octopress/">migrate to octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/03/vimium-introduction/">vimium——chrome下不错的vim式插件</a>
+        <a href="/blog/2012/04/06/20120406/">20120406 whole week</a>
       </li>
     
   </ul>
