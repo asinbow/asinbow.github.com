@@ -4,7 +4,7 @@
   <title><![CDATA[Category: plans | ASINBOW]]></title>
   <link href="http://asinbow.github.com/blog/categories/plans/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-05-01T21:02:06+08:00</updated>
+  <updated>2012-05-02T22:50:09+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[asinbow.wang]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[20120502计划]]></title>
+    <link href="http://asinbow.github.com/blog/2012/05/02/20120502/"/>
+    <updated>2012-05-02T22:30:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/05/02/20120502</id>
+    <content type="html"><![CDATA[<h3>进展</h3>
+
+<p>今天的动态Server切换功能进度不错，
+已经能够通过Web页面实现切换了，
+只是还是有一些Bug，
+明天过去修掉。</p>
+
+<p>为public的连接增加In/Out计数，
+这个可能要拖一拖。</p>
+
+<p>语音UGC的开发可以不急，
+不过要早点约人。</p>
+
+<h3>计划</h3>
+
+<p>明天的主要任务还是mongodb的dump，
+要和数据分析的同事配合好。</p>
+
+<h3>Scala</h3>
+
+<p>明天下午应该会有一段空闲的时间，
+利用这段时间好好实践一下Scala。</p>
+
+<p>很晚了，
+不写了，
+看点Scala就睡了。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[20120501计划]]></title>

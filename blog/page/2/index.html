@@ -9,7 +9,8 @@
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="今天发工资，不过我新办的银行卡没有登记到公司那边，没有发到。等一两天吧。 erlang： 1. try catch还有一个after，理解每个runtime exception，throw error exit. 2. 有时间继续学习erlang data structures。 3. &hellip;">
+  <meta name="description" content="1. erlang dynamic code module.
+dynamic_compile module. 2. erlang key-value store benchmark dict is a little fast than gb_trees, but seems not support &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/03/02/20120301/">20120301</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-02T01:32:03+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>1. erlang dynamic</h3>
+
+<blockquote><p><a href="http://www.erlang.org/doc/man/code.html">code</a> module.<br/>
+<a href="https://github.com/JacobVorreuter/dynamic_compile">dynamic_compile</a> module.</p></blockquote>
+
+<h3>2. erlang key-value store <a href="http://learnyousomeerlang.com/static/erlang/keyval_benchmark.erl">benchmark</a></h3>
+
+<blockquote><p>dict is a little fast than gb_trees, but seems not support traverse.</p></blockquote>
+
+<h3>3. 明天的去公司实现erlang的room server，</h3>
+
+<p>先用单一的gen_server实现吧，
+减小复杂度。
+虽然锁的粒度是全局的，
+但是如果把算法以外的操作都spawn出去，
+erlang的性能应该绰绰有余。
+未来一旦系统稳定了，
+减小一部分锁的粒度到room层次，
+提高性能也会容易一些。</p>
+
+<p>核心是写出data structure和algorithm。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -647,56 +704,6 @@ erlang的动态更新代码还不太会，
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/01/23/2012-year-plan/">2012年计划</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-01-23T00:00:58+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h4>一、傻逼的时候看看这篇文章。</h4>
-
-<h4>二、增强自我控制，安排好作息。</h4>
-
-<h4>三、对技术精益求精。</h4>
-
-<h4>四、工作要控制节奏，提高效率，不要拖拖拉拉。</h4>
-
-<h4>五、犯错的时候一定要惩罚一下自己。【*】</h4>
-
-<h4>六、和爱人好好相处，听话，乖。</h4>
-
-<h4>七、常回家看看。</h4>
-
-<h4>八、坚持写作，甭管多烂。</h4>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -714,6 +721,10 @@ erlang的动态更新代码还不太会，
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/05/02/20120502/">20120502计划</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/05/01/20120501/">20120501计划</a>
       </li>
     
@@ -723,10 +734,6 @@ erlang的动态更新代码还不太会，
     
       <li class="post">
         <a href="/blog/2012/04/06/kids-game-no-intellegence-develop/">儿童产品，请避开智力开发</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/04/06/20120406/">20120406 whole week</a>
       </li>
     
       <li class="post">

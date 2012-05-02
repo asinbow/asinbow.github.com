@@ -5,17 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>20120203 - ASINBOW</title>
+  <title>20120502计划 - ASINBOW</title>
   <meta name="author" content="asinbow.wang">
 
   
-  <meta name="description" content="总结： 这两天主要做的事情是把fiber_time_trace的问题解决，
-以及适当更改clog的server的代码，
-以保证运作正常。 fiber_time_trace的问题比较头疼，
-最终发现是因为绕了个弯子；
-照原来的代码模仿下来之后，
-没想到一部分特殊的代码使用了隐藏路径，
-查了半天， &hellip;">
+  <meta name="description" content="进展 今天的动态Server切换功能进度不错，
+已经能够通过Web页面实现切换了，
+只是还是有一些Bug，
+明天过去修掉。 为public的连接增加In/Out计数，
+这个可能要拖一拖。 语音UGC的开发可以不急，
+不过要早点约人。 计划 明天的主要任务还是mongodb的dump， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://asinbow.github.com/blog/2012/02/03/20120203">
+  <link rel="canonical" href="http://asinbow.github.com/blog/2012/05/02/20120502">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -74,7 +73,7 @@
   
   <header>
     
-      <h1 class="entry-title">20120203</h1>
+      <h1 class="entry-title">20120502计划</h1>
     
     
       <p class="meta">
@@ -90,52 +89,39 @@
   
 
 
-<time datetime="2012-02-03T23:14:40+08:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2012</time>
+<time datetime="2012-05-02T22:30:00+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3>总结：</h3>
+<div class="entry-content"><h3>进展</h3>
 
-<p>这两天主要做的事情是把fiber_time_trace的问题解决，
-以及适当更改clog的server的代码，
-以保证运作正常。</p>
+<p>今天的动态Server切换功能进度不错，
+已经能够通过Web页面实现切换了，
+只是还是有一些Bug，
+明天过去修掉。</p>
 
-<p>fiber_time_trace的问题比较头疼，
-最终发现是因为绕了个弯子；
-照原来的代码模仿下来之后，
-没想到一部分特殊的代码使用了隐藏路径，
-查了半天，发现的时候简直吐血了。</p>
+<p>为public的连接增加In/Out计数，
+这个可能要拖一拖。</p>
 
-<p>clog的server的代码现在运行下来还是不错的，
-不过我做的时候主要还是套用现有代码做的，
-完成以后感觉自己还是对erlang东西学习得不够深入。
-针对这个这两天需要学习下面两个方面的内容：
-一是erlang的binary操作，
-二是gen_server的整个体系。
-另外，
-还需要多体会erlang的编程风格，
-当然，
-这个过程得多写代码了。</p>
+<p>语音UGC的开发可以不急，
+不过要早点约人。</p>
 
-<h3>还有一个小计划：</h3>
+<h3>计划</h3>
 
-<p>学习五笔输入法，
-我记得大一的时候学过这玩意儿的，
-后来就不常用了。</p>
+<p>明天的主要任务还是mongodb的dump，
+要和数据分析的同事配合好。</p>
 
-<p>主要是不和人聊天。
-悲催～
-这次重新学习这个主要是为了学东西的时候快一点，
-像现在用拼音输入法一个一个的选来选取，
-累挺。</p>
+<h3>Scala</h3>
 
-<p>今天背了一部分字根，
-应该不会太难，
-因为只是复习而已。
-周末抽时间完成上面一部分内容。</p>
+<p>明天下午应该会有一段空闲的时间，
+利用这段时间好好实践一下Scala。</p>
+
+<p>很晚了，
+不写了，
+看点Scala就睡了。</p>
 </div>
 
 
@@ -158,8 +144,14 @@
   
 
 
-<time datetime="2012-02-03T23:14:40+08:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2012</time>
+<time datetime="2012-05-02T22:30:00+08:00" pubdate data-updated="true">May 2<span>nd</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/plans/'>plans</a>
+  
+</span>
 
 
     </p>
@@ -173,10 +165,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/01/30/20120130/" title="Previous Post: 20120130工作进展">&laquo; 20120130工作进展</a>
+        <a class="basic-alignment left" href="/blog/2012/05/01/20120501/" title="Previous Post: 20120501计划">&laquo; 20120501计划</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/02/05/20120205/" title="Next Post: 20120205">20120205 &raquo;</a>
       
     </p>
   </footer>
