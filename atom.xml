@@ -4,7 +4,7 @@
   <title><![CDATA[ASINBOW]]></title>
   <link href="http://asinbow.github.com/atom.xml" rel="self"/>
   <link href="http://asinbow.github.com/"/>
-  <updated>2012-05-02T22:50:09+08:00</updated>
+  <updated>2012-05-07T22:00:58+08:00</updated>
   <id>http://asinbow.github.com/</id>
   <author>
     <name><![CDATA[asinbow.wang]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[20120507计划]]></title>
+    <link href="http://asinbow.github.com/blog/2012/05/07/20120507/"/>
+    <updated>2012-05-07T21:42:00+08:00</updated>
+    <id>http://asinbow.github.com/blog/2012/05/07/20120507</id>
+    <content type="html"><![CDATA[<h3>进展</h3>
+
+<p>今天上午和同事一起解决了mongodb导出csv的问题，
+貌似迄今为一切正常。
+应该可以放下了。</p>
+
+<p>然后，
+转入语音UGC的开发，
+发现自己确实有点抗拒，
+硬着头皮看了一会儿，
+转而看scala去了。
+这样不对，
+明天得好好纠正这个问题。</p>
+
+<p>下午的时候发现同事做的Server Transfer不对，
+询问了一下，
+才知道还没调试通过，
+估计明天会花一点时间在这个上面。</p>
+
+<p>今天一个小小了收获是mongodb或者mysql多重组合索引的技巧，
+确实很有启发性。</p>
+
+<h3>计划</h3>
+
+<ul>
+<li>语音UGC一定要取得一个不错的进展</li>
+<li>联调Server Transfer成功</li>
+<li>Erlang Proxy Http请求的改进，去掉q_str的依赖</li>
+</ul>
+
+
+<h3>Scala</h3>
+
+<ul>
+<li>感觉应做个东西</li>
+</ul>
+
+
+<h3>PHP server for other</h3>
+
+<ul>
+<li>明天花时间写，今天不想太晚</li>
+</ul>
+
+
+<h3>作息</h3>
+
+<ul>
+<li>周五的那天晚上的熬夜把自己害惨了，
+以后不能再这样了。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[20120502计划]]></title>
@@ -713,42 +773,6 @@ erlang的gen_sever部分到现在还没有真正开始，
 应该不会太难，
 因为只是复习而已。
 周末抽时间完成上面一部分内容。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[20120130工作进展]]></title>
-    <link href="http://asinbow.github.com/blog/2012/01/30/20120130/"/>
-    <updated>2012-01-30T22:11:26+08:00</updated>
-    <id>http://asinbow.github.com/blog/2012/01/30/20120130</id>
-    <content type="html"><![CDATA[<p>早晨刚到的时候谋划开始写erlang的那个log server，
-面临的最大问题是现有的代码还不太熟悉。</p>
-
-<p>刚开始一会儿就开了晨会，
-所有这两天就开始上班的同事聚在一起。
-开会的时候觉得上次的那个Fiber time的问题还没有解决，
-回到办公桌上搞了一会儿，
-发现不是我想得那么简单，
-暂时放下了。</p>
-
-<p>于是接着继续整erlang，
-最为纠结的就是究竟用不用现有结构，
-以及怎么用。
-左右摇摆，
-最终还是使用了现有结构。
-到6点钟的时候，
-程序编译通过了，
-接着有一部分跑通了。
-明天过去继续调通其余部分。</p>
-
-<p>现在比较麻烦的是，
-erlang的动态更新代码还不太会，
-编译调试，
-然后都比较慢。
-明天早上到公司先弄明白这个，
-所谓磨刀*****。</p>
-
-<p>过一会儿就睡了。</p>
 ]]></content>
   </entry>
   
